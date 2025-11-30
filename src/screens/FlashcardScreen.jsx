@@ -15,11 +15,11 @@ import { ProgressBar } from '../components/ProgressBar';
 import { useFlashcard } from '../hooks/useFlashcard';
 import { useSwipe } from '../hooks/useSwipe';
 
-// Duration of flip animation in ms (must match CSS transition)
 const FLIP_DURATION = 300;
 
 /**
  * Main flashcard learning screen
+ * Optimized for iPhone 12 Pro (390x844)
  */
 export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,30 +29,21 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
 
   const currentWord = words[currentIndex];
 
-  /**
-   * Navigate to next/previous card with smooth transition
-   * If card is flipped, flip it back first, then change card
-   */
   const navigateToCard = useCallback((newIndex) => {
     if (isTransitioning) return;
 
     if (isFlipped) {
-      // Card is flipped - flip back first, then navigate
       setIsTransitioning(true);
       resetFlip();
-
-      // Wait for flip animation to complete before changing card
       setTimeout(() => {
         setCurrentIndex(newIndex);
         setIsTransitioning(false);
       }, FLIP_DURATION);
     } else {
-      // Card is not flipped - navigate immediately
       setCurrentIndex(newIndex);
     }
   }, [isFlipped, isTransitioning, resetFlip]);
 
-  // Navigation handlers
   const goToNext = useCallback(() => {
     if (currentIndex < words.length - 1) {
       navigateToCard(currentIndex + 1);
@@ -72,10 +63,8 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
     }
   }, [currentIndex, navigateToCard]);
 
-  // Swipe gesture handlers
   const swipeHandlers = useSwipe(goToNext, goToPrevious);
 
-  // Audio playback (placeholder)
   const playAudio = () => {
     toast({
       title: 'Audio coming soon!',
@@ -85,7 +74,6 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
     });
   };
 
-  // Mark word as learning or mastered
   const handleMarkLearning = () => {
     onUpdateStatus(currentWord.id, 'learning');
     toast({
@@ -107,13 +95,23 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
   };
 
   return (
-    <Container maxW="md" h="100vh" py={6} pb="100px">
-      <VStack spacing={6} h="100%">
-        {/* Progress bar */}
-        <ProgressBar stats={stats} />
+    <Container
+      maxW="390px"
+      h="100vh"
+      px={4}
+      py={4}
+      pb="90px"
+      display="flex"
+      flexDirection="column"
+    >
+      <VStack spacing={3} flex={1} w="100%">
+        {/* Progress bar - compact */}
+        <Box w="100%">
+          <ProgressBar stats={stats} />
+        </Box>
 
         {/* Card counter */}
-        <Text fontSize="sm" color="gray.500">
+        <Text fontSize="xs" color="gray.500">
           Card {currentIndex + 1} of {words.length}
         </Text>
 
@@ -125,6 +123,7 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          minH="0"
           style={{
             pointerEvents: isTransitioning ? 'none' : 'auto',
             opacity: isTransitioning ? 0.9 : 1,
@@ -140,41 +139,45 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
         </Box>
 
         {/* Navigation buttons */}
-        <HStack spacing={4} w="100%" justify="center">
+        <HStack spacing={6} w="100%" justify="center">
           <IconButton
-            icon={<FiChevronLeft />}
+            icon={<FiChevronLeft size={20} />}
             onClick={goToPrevious}
             isDisabled={currentIndex === 0 || isTransitioning}
             variant="outline"
-            size="lg"
+            size="md"
+            borderRadius="full"
             aria-label="Previous card"
           />
           <IconButton
-            icon={<FiChevronRight />}
+            icon={<FiChevronRight size={20} />}
             onClick={goToNext}
             isDisabled={currentIndex === words.length - 1 || isTransitioning}
             variant="outline"
-            size="lg"
+            size="md"
+            borderRadius="full"
             aria-label="Next card"
           />
         </HStack>
 
-        {/* Quick action buttons */}
+        {/* Quick action buttons - compact */}
         <HStack spacing={3} w="100%">
           <Button
-            leftIcon={<FiX />}
+            leftIcon={<FiX size={16} />}
             flex={1}
             variant="outline"
             colorScheme="gray"
+            size="md"
             onClick={handleMarkLearning}
             isDisabled={isTransitioning}
           >
-            Still Learning
+            Learning
           </Button>
           <Button
-            leftIcon={<FiCheck />}
+            leftIcon={<FiCheck size={16} />}
             flex={1}
-            colorScheme="brand"
+            colorScheme="red"
+            size="md"
             onClick={handleMarkMastered}
             isDisabled={isTransitioning}
           >

@@ -3,12 +3,8 @@ import { FiVolume2 } from 'react-icons/fi';
 
 /**
  * Highlights the target Chinese word in the example sentence
- * @param {string} example - The example sentence
- * @param {string} chinese - The Chinese word to highlight
- * @returns {JSX.Element[]} Array of text elements with highlighted word
  */
 const highlightWord = (example, chinese) => {
-  // Safety check for undefined/null values
   if (!example || !chinese) {
     return <Text as="span">{example || ''}</Text>;
   }
@@ -22,14 +18,12 @@ const highlightWord = (example, chinese) => {
 
   parts.forEach((part, index) => {
     if (index > 0) {
-      // Add the highlighted Chinese word before this part
       result.push(
         <Text
           as="span"
           key={`word-${index}`}
           fontWeight="bold"
           color="red.600"
-          fontSize="lg"
         >
           {chinese}
         </Text>
@@ -44,12 +38,10 @@ const highlightWord = (example, chinese) => {
 };
 
 /**
- * Flashcard component with flip animation
- * Front: Chinese characters only
- * Back: Pinyin, English meaning, and example sentence
+ * Flashcard component optimized for iPhone 12 Pro (390x844)
+ * Card size reduced by 10% for better fit
  */
 export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
-  // Common card face styles
   const cardFaceStyle = {
     position: 'absolute',
     width: '100%',
@@ -61,20 +53,19 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '1rem',
-    boxShadow: '0 10px 40px rgba(0,0,0,0.15)',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
   };
 
   return (
     <Box
-      w="100%"
-      maxW="400px"
-      h="450px"
+      w="90%"
+      maxW="340px"
+      h="380px"
       position="relative"
       style={{ perspective: '1000px' }}
       onClick={onFlip}
       cursor="pointer"
     >
-      {/* Card container with 3D flip effect */}
       <Box
         w="100%"
         h="100%"
@@ -85,36 +76,36 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
           transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
         }}
       >
-        {/* Front of card - Chinese characters only */}
+        {/* Front of card */}
         <Box
           style={{
             ...cardFaceStyle,
             backgroundColor: 'white',
           }}
-          p={8}
+          p={6}
         >
-          <VStack spacing={6}>
-            <Text fontSize="7xl" fontWeight="bold" color="gray.800">
+          <VStack spacing={4}>
+            <Text fontSize="6xl" fontWeight="bold" color="gray.800">
               {word.chinese}
             </Text>
-            <Text fontSize="sm" color="gray.400" mt={8}>
+            <Text fontSize="xs" color="gray.400" mt={4}>
               Tap to see meaning
             </Text>
           </VStack>
         </Box>
 
-        {/* Back of card - Pinyin, meaning, and example */}
+        {/* Back of card */}
         <Box
           style={{
             ...cardFaceStyle,
             backgroundColor: '#FFF8E7',
             transform: 'rotateY(180deg)',
           }}
-          p={6}
+          p={4}
         >
-          <VStack spacing={4} w="100%">
-            {/* Pinyin pronunciation */}
-            <Text fontSize="2xl" color="gray.600" fontStyle="italic">
+          <VStack spacing={2} w="100%">
+            {/* Pinyin */}
+            <Text fontSize="xl" color="gray.600" fontStyle="italic">
               {word.pinyin}
             </Text>
 
@@ -127,42 +118,39 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
               }}
               colorScheme="red"
               variant="outline"
-              size="md"
+              size="sm"
               aria-label="Play pronunciation"
             />
 
             {/* English meaning */}
-            <Text fontSize="3xl" fontWeight="bold" color="red.600" textAlign="center">
+            <Text fontSize="2xl" fontWeight="bold" color="red.600" textAlign="center">
               {word.english}
             </Text>
 
-            {/* Example sentence: Chinese + Pinyin + English */}
+            {/* Example sentence box */}
             <Box
-              mt={2}
-              p={4}
+              mt={1}
+              p={3}
               bg="white"
-              borderRadius="lg"
-              borderLeft="4px solid"
+              borderRadius="md"
+              borderLeft="3px solid"
               borderColor="red.500"
               w="100%"
             >
-              <VStack spacing={2}>
-                {/* Chinese sentence with highlighted word */}
-                <Text fontSize="md" color="gray.700" textAlign="center">
+              <VStack spacing={1}>
+                <Text fontSize="sm" color="gray.700" textAlign="center">
                   {highlightWord(word.exampleChinese, word.chinese)}
                 </Text>
-                {/* Pinyin */}
-                <Text fontSize="sm" color="gray.500" fontStyle="italic" textAlign="center">
+                <Text fontSize="xs" color="gray.500" fontStyle="italic" textAlign="center">
                   {word.examplePinyin}
                 </Text>
-                {/* English translation */}
-                <Text fontSize="sm" color="gray.600" textAlign="center">
+                <Text fontSize="xs" color="gray.600" textAlign="center">
                   {word.exampleEnglish}
                 </Text>
               </VStack>
             </Box>
 
-            <Text fontSize="sm" color="gray.400" mt={4}>
+            <Text fontSize="xs" color="gray.400" mt={2}>
               Tap to flip back
             </Text>
           </VStack>
