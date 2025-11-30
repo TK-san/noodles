@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/noodles/',
+  // Use /noodles/ for GitHub Pages, / for Cloudflare
+  base: process.env.CF_PAGES ? '/' : '/noodles/',
   server: {
     host: '0.0.0.0',
     port: 5173,
