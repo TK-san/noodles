@@ -1,10 +1,14 @@
-import { HStack, IconButton, Box, VStack, Text } from '@chakra-ui/react';
+import { HStack, IconButton, Box, VStack, Text, useColorModeValue } from '@chakra-ui/react';
 import { FiHome, FiBook, FiBarChart2, FiGrid } from 'react-icons/fi';
 
 /**
  * Bottom navigation component
  */
 export const Navigation = ({ currentScreen, onNavigate, showCategories, onCategoriesClick }) => {
+  const bgColor = useColorModeValue('white', 'gray.800');
+  const borderColor = useColorModeValue('gray.200', 'gray.700');
+  const inactiveColor = useColorModeValue('gray.500', 'gray.400');
+
   const navItems = [
     { id: 'home', icon: FiHome, label: 'Home' },
     { id: 'categories', icon: FiGrid, label: 'Topics', onClick: onCategoriesClick },
@@ -18,9 +22,9 @@ export const Navigation = ({ currentScreen, onNavigate, showCategories, onCatego
       bottom={0}
       left={0}
       right={0}
-      bg="gray.800"
+      bg={bgColor}
       borderTop="1px solid"
-      borderColor="gray.700"
+      borderColor={borderColor}
       boxShadow="lg"
       zIndex={10}
     >
@@ -46,13 +50,13 @@ export const Navigation = ({ currentScreen, onNavigate, showCategories, onCatego
                 icon={<item.icon size={20} />}
                 aria-label={item.label}
                 variant="ghost"
-                color={isActive ? 'green.400' : 'gray.400'}
+                color={isActive ? 'green.400' : inactiveColor}
                 size="sm"
                 _hover={{ bg: 'transparent' }}
               />
               <Text
                 fontSize="xs"
-                color={isActive ? 'green.400' : 'gray.400'}
+                color={isActive ? 'green.400' : inactiveColor}
                 mt={-1}
               >
                 {item.label}

@@ -1,6 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 
-// Custom theme optimized for mobile
+// Custom theme optimized for mobile with light/dark mode support
 const theme = extendTheme({
   config: {
     initialColorMode: 'light',
@@ -30,10 +30,28 @@ const theme = extendTheme({
     body: `'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`,
   },
   styles: {
-    global: {
+    global: (props) => ({
       body: {
-        bg: 'gray.50',
+        bg: props.colorMode === 'dark' ? 'gray.900' : 'gray.50',
+        color: props.colorMode === 'dark' ? 'white' : 'gray.800',
       },
+    }),
+  },
+  components: {
+    Button: {
+      variants: {
+        outline: (props) => ({
+          borderColor: props.colorMode === 'dark' ? 'gray.600' : 'gray.200',
+          color: props.colorMode === 'dark' ? 'white' : 'gray.800',
+        }),
+      },
+    },
+    Card: {
+      baseStyle: (props) => ({
+        container: {
+          bg: props.colorMode === 'dark' ? 'gray.800' : 'white',
+        },
+      }),
     },
   },
 });

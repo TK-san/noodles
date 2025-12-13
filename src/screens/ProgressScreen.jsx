@@ -1,37 +1,44 @@
-import { 
-  VStack, 
-  Container, 
-  Heading, 
-  Box, 
-  Text, 
+import {
+  VStack,
+  Container,
+  Heading,
+  Box,
+  Text,
   SimpleGrid,
   Stat,
   StatLabel,
   StatNumber,
   StatHelpText,
-  Progress
+  Progress,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 /**
  * Progress/Statistics screen
  */
 export const ProgressScreen = ({ stats }) => {
-  const masteredPercentage = stats.total > 0 
+  const masteredPercentage = stats.total > 0
     ? Math.round((stats.mastered / stats.total) * 100)
     : 0;
+
+  // Color mode values
+  const headingColor = useColorModeValue('gray.700', 'white');
+  const cardBg = useColorModeValue('white', 'gray.800');
+  const subtextColor = useColorModeValue('gray.600', 'gray.400');
+  const notSeenColor = useColorModeValue('gray.400', 'gray.500');
 
   return (
     <Container maxW="md" py={8} pb="100px">
       <VStack spacing={8} align="stretch">
-        <Heading size="lg" color="gray.700">
+        <Heading size="lg" color={headingColor}>
           Your Progress
         </Heading>
 
         {/* Overall progress card */}
-        <Box bg="white" p={6} borderRadius="xl" boxShadow="md">
+        <Box bg={cardBg} p={6} borderRadius="xl" boxShadow="md">
           <VStack spacing={4}>
             <Text fontSize="5xl">{masteredPercentage}%</Text>
-            <Text color="gray.600">Words Mastered</Text>
+            <Text color={subtextColor}>Words Mastered</Text>
             <Progress 
               value={masteredPercentage} 
               w="100%" 
@@ -44,7 +51,7 @@ export const ProgressScreen = ({ stats }) => {
 
         {/* Stats grid */}
         <SimpleGrid columns={2} spacing={4}>
-          <Box bg="white" p={5} borderRadius="lg" boxShadow="sm">
+          <Box bg={cardBg} p={5} borderRadius="lg" boxShadow="sm">
             <Stat>
               <StatLabel>Total Words</StatLabel>
               <StatNumber>{stats.total}</StatNumber>
@@ -52,7 +59,7 @@ export const ProgressScreen = ({ stats }) => {
             </Stat>
           </Box>
 
-          <Box bg="white" p={5} borderRadius="lg" boxShadow="sm">
+          <Box bg={cardBg} p={5} borderRadius="lg" boxShadow="sm">
             <Stat>
               <StatLabel>Mastered</StatLabel>
               <StatNumber color="green.500">{stats.mastered}</StatNumber>
@@ -60,7 +67,7 @@ export const ProgressScreen = ({ stats }) => {
             </Stat>
           </Box>
 
-          <Box bg="white" p={5} borderRadius="lg" boxShadow="sm">
+          <Box bg={cardBg} p={5} borderRadius="lg" boxShadow="sm">
             <Stat>
               <StatLabel>Learning</StatLabel>
               <StatNumber color="blue.500">{stats.learning}</StatNumber>
@@ -68,10 +75,10 @@ export const ProgressScreen = ({ stats }) => {
             </Stat>
           </Box>
 
-          <Box bg="white" p={5} borderRadius="lg" boxShadow="sm">
+          <Box bg={cardBg} p={5} borderRadius="lg" boxShadow="sm">
             <Stat>
               <StatLabel>Not Seen</StatLabel>
-              <StatNumber color="gray.400">{stats.notSeen}</StatNumber>
+              <StatNumber color={notSeenColor}>{stats.notSeen}</StatNumber>
               <StatHelpText>🆕 New</StatHelpText>
             </Stat>
           </Box>

@@ -1,10 +1,12 @@
-import { Box, VStack, Text, IconButton } from '@chakra-ui/react';
+import { Box, VStack, Text, IconButton, useColorModeValue } from '@chakra-ui/react';
 import { FiVolume2 } from 'react-icons/fi';
 
 /**
  * Highlights the target Chinese word in the example sentence
  */
-const highlightWord = (example, chinese) => {
+const HighlightWord = ({ example, chinese }) => {
+  const highlightColor = useColorModeValue('red.600', 'red.400');
+
   if (!example || !chinese) {
     return <Text as="span">{example || ''}</Text>;
   }
@@ -23,7 +25,7 @@ const highlightWord = (example, chinese) => {
           as="span"
           key={`word-${index}`}
           fontWeight="bold"
-          color="red.600"
+          color={highlightColor}
         >
           {chinese}
         </Text>
@@ -34,7 +36,7 @@ const highlightWord = (example, chinese) => {
     }
   });
 
-  return result;
+  return <>{result}</>;
 };
 
 /**
@@ -42,6 +44,19 @@ const highlightWord = (example, chinese) => {
  * Card size reduced by 10% for better fit
  */
 export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
+  // Color mode values
+  const cardFrontBg = useColorModeValue('white', 'gray.800');
+  const cardBackBg = useColorModeValue('#FFF8E7', 'gray.700');
+  const chineseColor = useColorModeValue('gray.800', 'white');
+  const pinyinColor = useColorModeValue('gray.600', 'gray.300');
+  const englishColor = useColorModeValue('red.600', 'red.400');
+  const exampleBoxBg = useColorModeValue('white', 'gray.800');
+  const exampleTextColor = useColorModeValue('gray.700', 'gray.200');
+  const examplePinyinColor = useColorModeValue('gray.500', 'gray.400');
+  const exampleEnglishColor = useColorModeValue('gray.600', 'gray.300');
+  const hintColor = useColorModeValue('gray.400', 'gray.500');
+  const shadowColor = useColorModeValue('rgba(0,0,0,0.12)', 'rgba(0,0,0,0.4)');
+
   const cardFaceStyle = {
     position: 'absolute',
     width: '100%',
@@ -53,7 +68,7 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '1rem',
-    boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+    boxShadow: `0 8px 32px ${shadowColor}`,
   };
 
   return (
@@ -80,15 +95,15 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
         <Box
           style={{
             ...cardFaceStyle,
-            backgroundColor: 'white',
+            backgroundColor: cardFrontBg,
           }}
           p={6}
         >
           <VStack spacing={4}>
-            <Text fontSize="6xl" fontWeight="bold" color="gray.800">
+            <Text fontSize="6xl" fontWeight="bold" color={chineseColor}>
               {word.chinese}
             </Text>
-            <Text fontSize="xs" color="gray.400" mt={4}>
+            <Text fontSize="xs" color={hintColor} mt={4}>
               Tap to see meaning
             </Text>
           </VStack>
@@ -98,14 +113,14 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
         <Box
           style={{
             ...cardFaceStyle,
-            backgroundColor: '#FFF8E7',
+            backgroundColor: cardBackBg,
             transform: 'rotateY(180deg)',
           }}
           p={4}
         >
           <VStack spacing={2} w="100%">
             {/* Pinyin */}
-            <Text fontSize="xl" color="gray.600" fontStyle="italic">
+            <Text fontSize="xl" color={pinyinColor} fontStyle="italic">
               {word.pinyin}
             </Text>
 
@@ -123,7 +138,7 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
             />
 
             {/* English meaning */}
-            <Text fontSize="2xl" fontWeight="bold" color="red.600" textAlign="center">
+            <Text fontSize="2xl" fontWeight="bold" color={englishColor} textAlign="center">
               {word.english}
             </Text>
 
@@ -131,26 +146,26 @@ export const Flashcard = ({ word, isFlipped, onFlip, onPlayAudio }) => {
             <Box
               mt={1}
               p={3}
-              bg="white"
+              bg={exampleBoxBg}
               borderRadius="md"
               borderLeft="3px solid"
               borderColor="red.500"
               w="100%"
             >
               <VStack spacing={1}>
-                <Text fontSize="sm" color="gray.700" textAlign="center">
-                  {highlightWord(word.exampleChinese, word.chinese)}
+                <Text fontSize="sm" color={exampleTextColor} textAlign="center">
+                  <HighlightWord example={word.exampleChinese} chinese={word.chinese} />
                 </Text>
-                <Text fontSize="xs" color="gray.500" fontStyle="italic" textAlign="center">
+                <Text fontSize="xs" color={examplePinyinColor} fontStyle="italic" textAlign="center">
                   {word.examplePinyin}
                 </Text>
-                <Text fontSize="xs" color="gray.600" textAlign="center">
+                <Text fontSize="xs" color={exampleEnglishColor} textAlign="center">
                   {word.exampleEnglish}
                 </Text>
               </VStack>
             </Box>
 
-            <Text fontSize="xs" color="gray.400" mt={2}>
+            <Text fontSize="xs" color={hintColor} mt={2}>
               Tap to flip back
             </Text>
           </VStack>

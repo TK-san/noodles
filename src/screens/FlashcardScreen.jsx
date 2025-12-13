@@ -6,7 +6,8 @@ import {
   Text,
   Button,
   useToast,
-  Box
+  Box,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { FiChevronLeft, FiChevronRight, FiCheck, FiX } from 'react-icons/fi';
 import { useState, useCallback } from 'react';
@@ -26,6 +27,10 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus, categoryName, ca
   const [isTransitioning, setIsTransitioning] = useState(false);
   const { isFlipped, flipCard, resetFlip } = useFlashcard();
   const toast = useToast();
+
+  // Color mode values
+  const categoryTextColor = useColorModeValue('gray.800', 'white');
+  const counterColor = useColorModeValue('gray.500', 'gray.400');
 
   const currentWord = words[currentIndex];
 
@@ -109,7 +114,7 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus, categoryName, ca
         {categoryName && (
           <HStack w="100%" justify="center" spacing={2}>
             <Text fontSize="lg">{categoryIcon}</Text>
-            <Text fontSize="md" fontWeight="bold" color="white">
+            <Text fontSize="md" fontWeight="bold" color={categoryTextColor}>
               {categoryName}
             </Text>
           </HStack>
@@ -121,7 +126,7 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus, categoryName, ca
         </Box>
 
         {/* Card counter */}
-        <Text fontSize="xs" color="gray.500">
+        <Text fontSize="xs" color={counterColor}>
           Card {currentIndex + 1} of {words.length}
         </Text>
 
