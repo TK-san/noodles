@@ -21,7 +21,7 @@ const FLIP_DURATION = 300;
  * Main flashcard learning screen
  * Optimized for iPhone 12 Pro (390x844)
  */
-export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
+export const FlashcardScreen = ({ words, stats, onUpdateStatus, categoryName, categoryIcon, onBackToCategories }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const { isFlipped, flipCard, resetFlip } = useFlashcard();
@@ -105,6 +105,16 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus }) => {
       flexDirection="column"
     >
       <VStack spacing={3} flex={1} w="100%">
+        {/* Category header */}
+        {categoryName && (
+          <HStack w="100%" justify="center" spacing={2}>
+            <Text fontSize="lg">{categoryIcon}</Text>
+            <Text fontSize="md" fontWeight="bold" color="white">
+              {categoryName}
+            </Text>
+          </HStack>
+        )}
+
         {/* Progress bar - compact */}
         <Box w="100%">
           <ProgressBar stats={stats} />

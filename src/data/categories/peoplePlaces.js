@@ -1,0 +1,113 @@
+// People & Places
+export const peoplePlacesData = [
+  {
+    id: "people-1",
+    chinese: "人",
+    pinyin: "rén",
+    english: "Person / People",
+    exampleChinese: "中国人很友好。",
+    examplePinyin: "Zhōngguó rén hěn yǒuhǎo.",
+    exampleEnglish: "Chinese people are friendly.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-2",
+    chinese: "朋友",
+    pinyin: "péngyou",
+    english: "Friend",
+    exampleChinese: "他是我的好朋友。",
+    examplePinyin: "Tā shì wǒ de hǎo péngyou.",
+    exampleEnglish: "He is my good friend.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-3",
+    chinese: "家",
+    pinyin: "jiā",
+    english: "Home / Family",
+    exampleChinese: "我想回家。",
+    examplePinyin: "Wǒ xiǎng huí jiā.",
+    exampleEnglish: "I want to go home.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-4",
+    chinese: "老师",
+    pinyin: "lǎoshī",
+    english: "Teacher",
+    exampleChinese: "我的老师很好。",
+    examplePinyin: "Wǒ de lǎoshī hěn hǎo.",
+    exampleEnglish: "My teacher is very good.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-5",
+    chinese: "学生",
+    pinyin: "xuésheng",
+    english: "Student",
+    exampleChinese: "我是一个学生。",
+    examplePinyin: "Wǒ shì yī gè xuésheng.",
+    exampleEnglish: "I am a student.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-6",
+    chinese: "医生",
+    pinyin: "yīshēng",
+    english: "Doctor",
+    exampleChinese: "我需要看医生。",
+    examplePinyin: "Wǒ xūyào kàn yīshēng.",
+    exampleEnglish: "I need to see a doctor.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-7",
+    chinese: "中国",
+    pinyin: "zhōngguó",
+    english: "China",
+    exampleChinese: "我想去中国旅行。",
+    examplePinyin: "Wǒ xiǎng qù zhōngguó lǚxíng.",
+    exampleEnglish: "I want to travel to China.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-8",
+    chinese: "北京",
+    pinyin: "běijīng",
+    english: "Beijing",
+    exampleChinese: "北京是中国的首都。",
+    examplePinyin: "Běijīng shì zhōngguó de shǒudū.",
+    exampleEnglish: "Beijing is China's capital.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-9",
+    chinese: "饭店",
+    pinyin: "fàndiàn",
+    english: "Restaurant / Hotel",
+    exampleChinese: "这家饭店很有名。",
+    examplePinyin: "Zhè jiā fàndiàn hěn yǒumíng.",
+    exampleEnglish: "This restaurant is famous.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  },
+  {
+    id: "people-10",
+    chinese: "学校",
+    pinyin: "xuéxiào",
+    english: "School",
+    exampleChinese: "我的学校很大。",
+    examplePinyin: "Wǒ de xuéxiào hěn dà.",
+    exampleEnglish: "My school is very big.",
+    category: "peoplePlaces",
+    status: "not_seen"
+  }
+];
