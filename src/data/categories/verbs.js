@@ -1,4 +1,4 @@
-// Common Verbs - Expanded (80 words)
+// Common Verbs - Expanded (100 words)
 export const verbsData = [
   // Essential verbs (1-15)
   {id:"verbs-1",chinese:"是",pinyin:"shì",english:"To be (am/is/are)",exampleChinese:"我是中国人。",examplePinyin:"Wǒ shì zhōngguó rén.",exampleEnglish:"I am Chinese.",category:"verbs",status:"not_seen"},
@@ -85,5 +85,26 @@ export const verbsData = [
   {id:"verbs-77",chinese:"决定",pinyin:"juédìng",english:"To decide",exampleChinese:"你决定了吗？",examplePinyin:"Nǐ juédìng le ma?",exampleEnglish:"Have you decided?",category:"verbs",status:"not_seen"},
   {id:"verbs-78",chinese:"选择",pinyin:"xuǎnzé",english:"To choose",exampleChinese:"请选择一个。",examplePinyin:"Qǐng xuǎnzé yī gè.",exampleEnglish:"Please choose one.",category:"verbs",status:"not_seen"},
   {id:"verbs-79",chinese:"觉得",pinyin:"juéde",english:"To feel / To think",exampleChinese:"我觉得很好。",examplePinyin:"Wǒ juéde hěn hǎo.",exampleEnglish:"I think it's good.",category:"verbs",status:"not_seen"},
-  {id:"verbs-80",chinese:"用",pinyin:"yòng",english:"To use",exampleChinese:"我用电脑工作。",examplePinyin:"Wǒ yòng diànnǎo gōngzuò.",exampleEnglish:"I use a computer for work.",category:"verbs",status:"not_seen"}
+  {id:"verbs-80",chinese:"用",pinyin:"yòng",english:"To use",exampleChinese:"我用电脑工作。",examplePinyin:"Wǒ yòng diànnǎo gōngzuò.",exampleEnglish:"I use a computer for work.",category:"verbs",status:"not_seen"},
+  // More Verbs (81-100)
+  {id:"verbs-81",chinese:"拿",pinyin:"ná",english:"To take / To hold",exampleChinese:"请帮我拿一下。",examplePinyin:"Qǐng bāng wǒ ná yīxià.",exampleEnglish:"Please help me hold this.",category:"verbs",status:"not_seen"},
+  {id:"verbs-82",chinese:"放",pinyin:"fàng",english:"To put / To place",exampleChinese:"把书放在桌子上。",examplePinyin:"Bǎ shū fàng zài zhuōzi shàng.",exampleEnglish:"Put the book on the table.",category:"verbs",status:"not_seen"},
+  {id:"verbs-83",chinese:"带",pinyin:"dài",english:"To bring / To carry",exampleChinese:"别忘了带护照。",examplePinyin:"Bié wàng le dài hùzhào.",exampleEnglish:"Don't forget to bring your passport.",category:"verbs",status:"not_seen"},
+  {id:"verbs-84",chinese:"离开",pinyin:"líkāi",english:"To leave / To depart",exampleChinese:"我明天离开北京。",examplePinyin:"Wǒ míngtiān líkāi běijīng.",exampleEnglish:"I'm leaving Beijing tomorrow.",category:"verbs",status:"not_seen"},
+  {id:"verbs-85",chinese:"开始",pinyin:"kāishǐ",english:"To begin / To start",exampleChinese:"我们开始吧。",examplePinyin:"Wǒmen kāishǐ ba.",exampleEnglish:"Let's start.",category:"verbs",status:"not_seen"},
+  {id:"verbs-86",chinese:"结束",pinyin:"jiéshù",english:"To finish / To end",exampleChinese:"会议结束了。",examplePinyin:"Huìyì jiéshù le.",exampleEnglish:"The meeting is over.",category:"verbs",status:"not_seen"},
+  {id:"verbs-87",chinese:"继续",pinyin:"jìxù",english:"To continue",exampleChinese:"请继续。",examplePinyin:"Qǐng jìxù.",exampleEnglish:"Please continue.",category:"verbs",status:"not_seen"},
+  {id:"verbs-88",chinese:"停止",pinyin:"tíngzhǐ",english:"To stop / To cease",exampleChinese:"请停止说话。",examplePinyin:"Qǐng tíngzhǐ shuōhuà.",exampleEnglish:"Please stop talking.",category:"verbs",status:"not_seen"},
+  {id:"verbs-89",chinese:"准备",pinyin:"zhǔnbèi",english:"To prepare",exampleChinese:"我在准备考试。",examplePinyin:"Wǒ zài zhǔnbèi kǎoshì.",exampleEnglish:"I'm preparing for the exam.",category:"verbs",status:"not_seen"},
+  {id:"verbs-90",chinese:"完成",pinyin:"wánchéng",english:"To complete / To finish",exampleChinese:"我完成了作业。",examplePinyin:"Wǒ wánchéng le zuòyè.",exampleEnglish:"I finished my homework.",category:"verbs",status:"not_seen"},
+  {id:"verbs-91",chinese:"参加",pinyin:"cānjiā",english:"To participate / To attend",exampleChinese:"我参加了会议。",examplePinyin:"Wǒ cānjiā le huìyì.",exampleEnglish:"I attended the meeting.",category:"verbs",status:"not_seen"},
+  {id:"verbs-92",chinese:"取消",pinyin:"qǔxiāo",english:"To cancel",exampleChinese:"我要取消预订。",examplePinyin:"Wǒ yào qǜxiāo yùdìng.",exampleEnglish:"I want to cancel the reservation.",category:"verbs",status:"not_seen"},
+  {id:"verbs-93",chinese:"改变",pinyin:"gǎibiàn",english:"To change",exampleChinese:"情况改变了。",examplePinyin:"Qíngkuàng gǎibiàn le.",exampleEnglish:"The situation has changed.",category:"verbs",status:"not_seen"},
+  {id:"verbs-94",chinese:"增加",pinyin:"zēngjiā",english:"To increase / To add",exampleChinese:"价格增加了。",examplePinyin:"Jiàgé zēngjiā le.",exampleEnglish:"The price has increased.",category:"verbs",status:"not_seen"},
+  {id:"verbs-95",chinese:"减少",pinyin:"jiǎnshǎo",english:"To decrease / To reduce",exampleChinese:"人数减少了。",examplePinyin:"Rénshù jiǎnshǎo le.",exampleEnglish:"The number of people decreased.",category:"verbs",status:"not_seen"},
+  {id:"verbs-96",chinese:"提高",pinyin:"tígāo",english:"To improve / To raise",exampleChinese:"我想提高中文水平。",examplePinyin:"Wǒ xiǎng tígāo zhōngwén shuǐpíng.",exampleEnglish:"I want to improve my Chinese level.",category:"verbs",status:"not_seen"},
+  {id:"verbs-97",chinese:"降低",pinyin:"jiàngdī",english:"To lower / To reduce",exampleChinese:"降低音量。",examplePinyin:"Jiàngdī yīnliàng.",exampleEnglish:"Lower the volume.",category:"verbs",status:"not_seen"},
+  {id:"verbs-98",chinese:"检查",pinyin:"jiǎnchá",english:"To check / To inspect",exampleChinese:"请检查一下。",examplePinyin:"Qǐng jiǎnchá yīxià.",exampleEnglish:"Please check it.",category:"verbs",status:"not_seen"},
+  {id:"verbs-99",chinese:"比较",pinyin:"bǐjiào",english:"To compare",exampleChinese:"比较一下价格。",examplePinyin:"Bǐjiào yīxià jiàgé.",exampleEnglish:"Compare the prices.",category:"verbs",status:"not_seen"},
+  {id:"verbs-100",chinese:"影响",pinyin:"yǐngxiǎng",english:"To affect / To influence",exampleChinese:"天气影响心情。",examplePinyin:"Tiānqì yǐngxiǎng xīnqíng.",exampleEnglish:"Weather affects mood.",category:"verbs",status:"not_seen"}
 ];

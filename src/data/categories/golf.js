@@ -1,4 +1,4 @@
-// Golf Vocabulary - 85 words
+// Golf Vocabulary - 100 words
 export const golfData = [
   {
     id: "golf-1",
@@ -932,6 +932,171 @@ export const golfData = [
     exampleChinese: "好球！打得真好！",
     examplePinyin: "Hǎo qiú! Dǎ de zhēn hǎo!",
     exampleEnglish: "Nice shot! Well played!",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-86",
+    chinese: "球场维护",
+    pinyin: "qiúchǎng wéihù",
+    english: "Course maintenance",
+    exampleChinese: "球场维护很好。",
+    examplePinyin: "Qiúchǎng wéihù hěn hǎo.",
+    exampleEnglish: "The course maintenance is very good.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-87",
+    chinese: "球场记录",
+    pinyin: "qiúchǎng jìlù",
+    english: "Course record",
+    exampleChinese: "他打破了球场记录。",
+    examplePinyin: "Tā dǎpò le qiúchǎng jìlù.",
+    exampleEnglish: "He broke the course record.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-88",
+    chinese: "职业选手",
+    pinyin: "zhíyè xuǎnshǒu",
+    english: "Professional player",
+    exampleChinese: "他是职业选手。",
+    examplePinyin: "Tā shì zhíyè xuǎnshǒu.",
+    exampleEnglish: "He is a professional player.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-89",
+    chinese: "业余选手",
+    pinyin: "yèyú xuǎnshǒu",
+    english: "Amateur player",
+    exampleChinese: "我是业余选手。",
+    examplePinyin: "Wǒ shì yèyú xuǎnshǒu.",
+    exampleEnglish: "I'm an amateur player.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-90",
+    chinese: "锦标赛",
+    pinyin: "jǐnbiāo sài",
+    english: "Championship / Tournament",
+    exampleChinese: "这是重要的锦标赛。",
+    examplePinyin: "Zhè shì zhòngyào de jǐnbiāo sài.",
+    exampleEnglish: "This is an important championship.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-91",
+    chinese: "领先",
+    pinyin: "lǐngxiān",
+    english: "To lead / In the lead",
+    exampleChinese: "他现在领先。",
+    examplePinyin: "Tā xiànzài lǐngxiān.",
+    exampleEnglish: "He's in the lead now.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-92",
+    chinese: "落后",
+    pinyin: "luòhòu",
+    english: "To fall behind / Behind",
+    exampleChinese: "我落后三杆。",
+    examplePinyin: "Wǒ luòhòu sān gān.",
+    exampleEnglish: "I'm three strokes behind.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-93",
+    chinese: "晋级",
+    pinyin: "jìnjí",
+    english: "To advance / Make the cut",
+    exampleChinese: "他成功晋级了。",
+    examplePinyin: "Tā chénggōng jìnjí le.",
+    exampleEnglish: "He successfully made the cut.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-94",
+    chinese: "淘汰",
+    pinyin: "táotài",
+    english: "To be eliminated / Miss the cut",
+    exampleChinese: "他被淘汰了。",
+    examplePinyin: "Tā bèi táotài le.",
+    exampleEnglish: "He missed the cut.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-95",
+    chinese: "冠军",
+    pinyin: "guànjūn",
+    english: "Champion / Winner",
+    exampleChinese: "祝贺你成为冠军！",
+    examplePinyin: "Zhùhè nǐ chéngwéi guànjūn!",
+    exampleEnglish: "Congratulations on becoming champion!",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-96",
+    chinese: "亚军",
+    pinyin: "yàjūn",
+    english: "Runner-up / Second place",
+    exampleChinese: "他获得了亚军。",
+    examplePinyin: "Tā huòdé le yàjūn.",
+    exampleEnglish: "He finished as runner-up.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-97",
+    chinese: "奖杯",
+    pinyin: "jiǎngbēi",
+    english: "Trophy",
+    exampleChinese: "奖杯很漂亮。",
+    examplePinyin: "Jiǎngbēi hěn piàoliang.",
+    exampleEnglish: "The trophy is beautiful.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-98",
+    chinese: "奖金",
+    pinyin: "jiǎngjīn",
+    english: "Prize money",
+    exampleChinese: "奖金很丰厚。",
+    examplePinyin: "Jiǎngjīn hěn fēnghòu.",
+    exampleEnglish: "The prize money is generous.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-99",
+    chinese: "练习",
+    pinyin: "liànxí",
+    english: "Practice / Training",
+    exampleChinese: "每天都要练习。",
+    examplePinyin: "Měitiān dōu yào liànxí.",
+    exampleEnglish: "Practice every day.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-100",
+    chinese: "教练",
+    pinyin: "jiàoliàn",
+    english: "Coach / Instructor",
+    exampleChinese: "我的教练很专业。",
+    examplePinyin: "Wǒ de jiàoliàn hěn zhuānyè.",
+    exampleEnglish: "My coach is very professional.",
     category: "golf",
     status: "not_seen"
   }

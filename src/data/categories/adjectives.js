@@ -1,4 +1,4 @@
-// Adjectives - Expanded (65 words)
+// Adjectives - Expanded (100 words)
 export const adjectivesData = [
   // Size & Quantity (1-12)
   {id:"adj-1",chinese:"大",pinyin:"dà",english:"Big / Large",exampleChinese:"这个房间很大。",examplePinyin:"Zhège fángjiān hěn dà.",exampleEnglish:"This room is very big.",category:"adjectives",status:"not_seen"},
@@ -70,5 +70,41 @@ export const adjectivesData = [
   {id:"adj-62",chinese:"复杂",pinyin:"fùzá",english:"Complex",exampleChinese:"情况很复杂。",examplePinyin:"Qíngkuàng hěn fùzá.",exampleEnglish:"The situation is complex.",category:"adjectives",status:"not_seen"},
   {id:"adj-63",chinese:"特别",pinyin:"tèbié",english:"Special",exampleChinese:"今天是特别的日子。",examplePinyin:"Jīntiān shì tèbié de rìzi.",exampleEnglish:"Today is a special day.",category:"adjectives",status:"not_seen"},
   {id:"adj-64",chinese:"一样",pinyin:"yīyàng",english:"Same",exampleChinese:"我们一样大。",examplePinyin:"Wǒmen yīyàng dà.",exampleEnglish:"We're the same age.",category:"adjectives",status:"not_seen"},
-  {id:"adj-65",chinese:"不同",pinyin:"bùtóng",english:"Different",exampleChinese:"这两个不同。",examplePinyin:"Zhè liǎng gè bùtóng.",exampleEnglish:"These two are different.",category:"adjectives",status:"not_seen"}
+  {id:"adj-65",chinese:"不同",pinyin:"bùtóng",english:"Different",exampleChinese:"这两个不同。",examplePinyin:"Zhè liǎng gè bùtóng.",exampleEnglish:"These two are different.",category:"adjectives",status:"not_seen"},
+  // Intermediate Adjectives (66-100)
+  {id:"adj-66",chinese:"明显",pinyin:"míngxiǎn",english:"Obvious / Clear",exampleChinese:"这个问题很明显。",examplePinyin:"Zhège wèntí hěn míngxiǎn.",exampleEnglish:"This problem is obvious.",category:"adjectives",status:"not_seen"},
+  {id:"adj-67",chinese:"严重",pinyin:"yánzhòng",english:"Serious / Severe",exampleChinese:"问题很严重。",examplePinyin:"Wèntí hěn yánzhòng.",exampleEnglish:"The problem is serious.",category:"adjectives",status:"not_seen"},
+  {id:"adj-68",chinese:"合适",pinyin:"héshì",english:"Suitable / Appropriate",exampleChinese:"这件衣服很合适。",examplePinyin:"Zhè jiàn yīfu hěn héshì.",exampleEnglish:"This clothes fits well.",category:"adjectives",status:"not_seen"},
+  {id:"adj-69",chinese:"充足",pinyin:"chōngzú",english:"Sufficient / Adequate",exampleChinese:"时间很充足。",examplePinyin:"Shíjiān hěn chōngzú.",exampleEnglish:"There's sufficient time.",category:"adjectives",status:"not_seen"},
+  {id:"adj-70",chinese:"丰富",pinyin:"fēngfù",english:"Rich / Abundant",exampleChinese:"她的经验很丰富。",examplePinyin:"Tā de jīngyàn hěn fēngfù.",exampleEnglish:"She has rich experience.",category:"adjectives",status:"not_seen"},
+  {id:"adj-71",chinese:"精彩",pinyin:"jīngcǎi",english:"Wonderful / Brilliant",exampleChinese:"演出很精彩。",examplePinyin:"Yǎnchū hěn jīngcǎi.",exampleEnglish:"The performance was wonderful.",category:"adjectives",status:"not_seen"},
+  {id:"adj-72",chinese:"糟糕",pinyin:"zāogāo",english:"Terrible / Awful",exampleChinese:"天气太糟糕了。",examplePinyin:"Tiānqì tài zāogāo le.",exampleEnglish:"The weather is terrible.",category:"adjectives",status:"not_seen"},
+  {id:"adj-73",chinese:"普通",pinyin:"pǔtōng",english:"Ordinary / Common",exampleChinese:"这是普通的事。",examplePinyin:"Zhè shì pǔtōng de shì.",exampleEnglish:"This is an ordinary thing.",category:"adjectives",status:"not_seen"},
+  {id:"adj-74",chinese:"独特",pinyin:"dútè",english:"Unique / Distinctive",exampleChinese:"这个设计很独特。",examplePinyin:"Zhège shèjì hěn dútè.",exampleEnglish:"This design is unique.",category:"adjectives",status:"not_seen"},
+  {id:"adj-75",chinese:"完美",pinyin:"wánměi",english:"Perfect",exampleChinese:"一切都很完美。",examplePinyin:"Yīqiè dōu hěn wánměi.",exampleEnglish:"Everything is perfect.",category:"adjectives",status:"not_seen"},
+  {id:"adj-76",chinese:"优秀",pinyin:"yōuxiù",english:"Excellent / Outstanding",exampleChinese:"他是优秀的学生。",examplePinyin:"Tā shì yōuxiù de xuéshēng.",exampleEnglish:"He is an excellent student.",category:"adjectives",status:"not_seen"},
+  {id:"adj-77",chinese:"失望",pinyin:"shīwàng",english:"Disappointed",exampleChinese:"我很失望。",examplePinyin:"Wǒ hěn shīwàng.",exampleEnglish:"I'm disappointed.",category:"adjectives",status:"not_seen"},
+  {id:"adj-78",chinese:"满意",pinyin:"mǎnyì",english:"Satisfied",exampleChinese:"我对结果很满意。",examplePinyin:"Wǒ duì jiéguǒ hěn mǎnyì.",exampleEnglish:"I'm satisfied with the result.",category:"adjectives",status:"not_seen"},
+  {id:"adj-79",chinese:"激动",pinyin:"jīdòng",english:"Excited / Moved",exampleChinese:"他很激动。",examplePinyin:"Tā hěn jīdòng.",exampleEnglish:"He is very excited.",category:"adjectives",status:"not_seen"},
+  {id:"adj-80",chinese:"平静",pinyin:"píngjìng",english:"Calm / Peaceful",exampleChinese:"湖水很平静。",examplePinyin:"Hú shuǐ hěn píngjìng.",exampleEnglish:"The lake is calm.",category:"adjectives",status:"not_seen"},
+  {id:"adj-81",chinese:"勇敢",pinyin:"yǒnggǎn",english:"Brave / Courageous",exampleChinese:"他很勇敢。",examplePinyin:"Tā hěn yǒnggǎn.",exampleEnglish:"He is very brave.",category:"adjectives",status:"not_seen"},
+  {id:"adj-82",chinese:"诚实",pinyin:"chéngshí",english:"Honest",exampleChinese:"她是诚实的人。",examplePinyin:"Tā shì chéngshí de rén.",exampleEnglish:"She is an honest person.",category:"adjectives",status:"not_seen"},
+  {id:"adj-83",chinese:"骄傲",pinyin:"jiāo'ào",english:"Proud",exampleChinese:"我为你感到骄傲。",examplePinyin:"Wǒ wèi nǐ gǎndào jiāo'ào.",exampleEnglish:"I'm proud of you.",category:"adjectives",status:"not_seen"},
+  {id:"adj-84",chinese:"谦虚",pinyin:"qiānxū",english:"Modest / Humble",exampleChinese:"他很谦虚。",examplePinyin:"Tā hěn qiānxū.",exampleEnglish:"He is very modest.",category:"adjectives",status:"not_seen"},
+  {id:"adj-85",chinese:"耐心",pinyin:"nàixīn",english:"Patient",exampleChinese:"请耐心等待。",examplePinyin:"Qǐng nàixīn děngdài.",exampleEnglish:"Please wait patiently.",category:"adjectives",status:"not_seen"},
+  {id:"adj-86",chinese:"细心",pinyin:"xìxīn",english:"Careful / Attentive",exampleChinese:"她工作很细心。",examplePinyin:"Tā gōngzuò hěn xìxīn.",exampleEnglish:"She works carefully.",category:"adjectives",status:"not_seen"},
+  {id:"adj-87",chinese:"粗心",pinyin:"cūxīn",english:"Careless",exampleChinese:"他太粗心了。",examplePinyin:"Tā tài cūxīn le.",exampleEnglish:"He is too careless.",category:"adjectives",status:"not_seen"},
+  {id:"adj-88",chinese:"成熟",pinyin:"chéngshú",english:"Mature / Ripe",exampleChinese:"苹果已经成熟了。",examplePinyin:"Píngguǒ yǐjīng chéngshú le.",exampleEnglish:"The apple is ripe.",category:"adjectives",status:"not_seen"},
+  {id:"adj-89",chinese:"幼稚",pinyin:"yòuzhì",english:"Childish / Naive",exampleChinese:"这个想法很幼稚。",examplePinyin:"Zhège xiǎngfǎ hěn yòuzhì.",exampleEnglish:"This idea is childish.",category:"adjectives",status:"not_seen"},
+  {id:"adj-90",chinese:"清楚",pinyin:"qīngchu",english:"Clear / Distinct",exampleChinese:"我听得很清楚。",examplePinyin:"Wǒ tīng de hěn qīngchu.",exampleEnglish:"I heard it clearly.",category:"adjectives",status:"not_seen"},
+  {id:"adj-91",chinese:"模糊",pinyin:"móhu",english:"Blurry / Vague",exampleChinese:"照片很模糊。",examplePinyin:"Zhàopiàn hěn móhu.",exampleEnglish:"The photo is blurry.",category:"adjectives",status:"not_seen"},
+  {id:"adj-92",chinese:"整齐",pinyin:"zhěngqí",english:"Neat / Tidy",exampleChinese:"房间很整齐。",examplePinyin:"Fángjiān hěn zhěngqí.",exampleEnglish:"The room is tidy.",category:"adjectives",status:"not_seen"},
+  {id:"adj-93",chinese:"乱",pinyin:"luàn",english:"Messy / Chaotic",exampleChinese:"桌子上很乱。",examplePinyin:"Zhuōzi shàng hěn luàn.",exampleEnglish:"The table is messy.",category:"adjectives",status:"not_seen"},
+  {id:"adj-94",chinese:"宽",pinyin:"kuān",english:"Wide / Broad",exampleChinese:"这条路很宽。",examplePinyin:"Zhè tiáo lù hěn kuān.",exampleEnglish:"This road is wide.",category:"adjectives",status:"not_seen"},
+  {id:"adj-95",chinese:"窄",pinyin:"zhǎi",english:"Narrow",exampleChinese:"巷子很窄。",examplePinyin:"Xiàngzi hěn zhǎi.",exampleEnglish:"The alley is narrow.",category:"adjectives",status:"not_seen"},
+  {id:"adj-96",chinese:"深",pinyin:"shēn",english:"Deep",exampleChinese:"水很深。",examplePinyin:"Shuǐ hěn shēn.",exampleEnglish:"The water is deep.",category:"adjectives",status:"not_seen"},
+  {id:"adj-97",chinese:"浅",pinyin:"qiǎn",english:"Shallow",exampleChinese:"这里水很浅。",examplePinyin:"Zhèlǐ shuǐ hěn qiǎn.",exampleEnglish:"The water is shallow here.",category:"adjectives",status:"not_seen"},
+  {id:"adj-98",chinese:"厚",pinyin:"hòu",english:"Thick",exampleChinese:"这本书很厚。",examplePinyin:"Zhè běn shū hěn hòu.",exampleEnglish:"This book is thick.",category:"adjectives",status:"not_seen"},
+  {id:"adj-99",chinese:"薄",pinyin:"báo",english:"Thin",exampleChinese:"纸很薄。",examplePinyin:"Zhǐ hěn báo.",exampleEnglish:"The paper is thin.",category:"adjectives",status:"not_seen"},
+  {id:"adj-100",chinese:"软",pinyin:"ruǎn",english:"Soft",exampleChinese:"床很软。",examplePinyin:"Chuáng hěn ruǎn.",exampleEnglish:"The bed is soft.",category:"adjectives",status:"not_seen"}
 ];

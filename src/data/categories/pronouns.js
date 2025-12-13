@@ -1,4 +1,4 @@
-// Pronouns & Question Words - Expanded (60 words)
+// Pronouns & Question Words - Expanded (100 words)
 export const pronounsData = [
   // Personal pronouns (1-12)
   {id:"pronouns-1",chinese:"我",pinyin:"wǒ",english:"I / Me",exampleChinese:"我是学生。",examplePinyin:"Wǒ shì xuésheng.",exampleEnglish:"I am a student.",category:"pronouns",status:"not_seen"},
@@ -64,5 +64,48 @@ export const pronounsData = [
   {id:"pronouns-57",chinese:"我们的",pinyin:"wǒmende",english:"Our / Ours",exampleChinese:"这是我们的教室。",examplePinyin:"Zhè shì wǒmen de jiàoshì.",exampleEnglish:"This is our classroom.",category:"pronouns",status:"not_seen"},
   {id:"pronouns-58",chinese:"他们的",pinyin:"tāmende",english:"Their / Theirs",exampleChinese:"这是他们的房子。",examplePinyin:"Zhè shì tāmen de fángzi.",exampleEnglish:"This is their house.",category:"pronouns",status:"not_seen"},
   {id:"pronouns-59",chinese:"别人",pinyin:"biérén",english:"Other people",exampleChinese:"别人怎么说？",examplePinyin:"Biérén zěnme shuō?",exampleEnglish:"What do others say?",category:"pronouns",status:"not_seen"},
-  {id:"pronouns-60",chinese:"彼此",pinyin:"bǐcǐ",english:"Each other",exampleChinese:"我们彼此帮助。",examplePinyin:"Wǒmen bǐcǐ bāngzhù.",exampleEnglish:"We help each other.",category:"pronouns",status:"not_seen"}
+  {id:"pronouns-60",chinese:"彼此",pinyin:"bǐcǐ",english:"Each other",exampleChinese:"我们彼此帮助。",examplePinyin:"Wǒmen bǐcǐ bāngzhù.",exampleEnglish:"We help each other.",category:"pronouns",status:"not_seen"},
+  // Conjunctions & Connectors (61-75)
+  {id:"pronouns-61",chinese:"和",pinyin:"hé",english:"And",exampleChinese:"我和你一起去。",examplePinyin:"Wǒ hé nǐ yīqǐ qù.",exampleEnglish:"You and I go together.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-62",chinese:"或者",pinyin:"huòzhě",english:"Or",exampleChinese:"喝茶或者咖啡？",examplePinyin:"Hē chá huòzhě kāfēi?",exampleEnglish:"Tea or coffee?",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-63",chinese:"但是",pinyin:"dànshì",english:"But / However",exampleChinese:"我想去，但是没时间。",examplePinyin:"Wǒ xiǎng qù, dànshì méi shíjiān.",exampleEnglish:"I want to go, but I don't have time.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-64",chinese:"因为",pinyin:"yīnwèi",english:"Because",exampleChinese:"因为下雨，所以没去。",examplePinyin:"Yīnwèi xiàyǔ, suǒyǐ méi qù.",exampleEnglish:"Because it rained, I didn't go.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-65",chinese:"所以",pinyin:"suǒyǐ",english:"So / Therefore",exampleChinese:"我累了，所以要休息。",examplePinyin:"Wǒ lèi le, suǒyǐ yào xiūxi.",exampleEnglish:"I'm tired, so I need to rest.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-66",chinese:"如果",pinyin:"rúguǒ",english:"If",exampleChinese:"如果明天下雨，我就不去。",examplePinyin:"Rúguǒ míngtiān xiàyǔ, wǒ jiù bù qù.",exampleEnglish:"If it rains tomorrow, I won't go.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-67",chinese:"虽然",pinyin:"suīrán",english:"Although",exampleChinese:"虽然很贵，但是很好。",examplePinyin:"Suīrán hěn guì, dànshì hěn hǎo.",exampleEnglish:"Although it's expensive, it's very good.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-68",chinese:"还是",pinyin:"háishi",english:"Or (in questions)",exampleChinese:"你喝茶还是咖啡？",examplePinyin:"Nǐ hē chá háishi kāfēi?",exampleEnglish:"Do you drink tea or coffee?",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-69",chinese:"不但",pinyin:"búdàn",english:"Not only",exampleChinese:"他不但聪明，而且努力。",examplePinyin:"Tā búdàn cōngming, érqiě nǔlì.",exampleEnglish:"He is not only smart, but also hardworking.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-70",chinese:"而且",pinyin:"érqiě",english:"Moreover / And also",exampleChinese:"这个便宜，而且质量好。",examplePinyin:"Zhège piányi, érqiě zhìliàng hǎo.",exampleEnglish:"This is cheap, and moreover good quality.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-71",chinese:"不过",pinyin:"búguò",english:"However / But",exampleChinese:"很好，不过太贵了。",examplePinyin:"Hěn hǎo, búguò tài guì le.",exampleEnglish:"It's very good, but too expensive.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-72",chinese:"除了",pinyin:"chúle",english:"Except / Besides",exampleChinese:"除了中文，我也会英文。",examplePinyin:"Chúle zhōngwén, wǒ yě huì yīngwén.",exampleEnglish:"Besides Chinese, I also speak English.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-73",chinese:"无论",pinyin:"wúlùn",english:"No matter",exampleChinese:"无论多难，我都会坚持。",examplePinyin:"Wúlùn duō nán, wǒ dōu huì jiānchí.",exampleEnglish:"No matter how difficult, I will persevere.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-74",chinese:"要是",pinyin:"yàoshi",english:"If",exampleChinese:"要是你累了就休息吧。",examplePinyin:"Yàoshi nǐ lèi le jiù xiūxi ba.",exampleEnglish:"If you're tired, just rest.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-75",chinese:"既然",pinyin:"jìrán",english:"Since / Now that",exampleChinese:"既然来了，就好好玩吧。",examplePinyin:"Jìrán lái le, jiù hǎohao wán ba.",exampleEnglish:"Since you're here, have a good time.",category:"pronouns",status:"not_seen"},
+  // Adverbs & Intensifiers (76-90)
+  {id:"pronouns-76",chinese:"很",pinyin:"hěn",english:"Very",exampleChinese:"我很高兴。",examplePinyin:"Wǒ hěn gāoxìng.",exampleEnglish:"I'm very happy.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-77",chinese:"非常",pinyin:"fēicháng",english:"Extremely / Very",exampleChinese:"这个非常重要。",examplePinyin:"Zhège fēicháng zhòngyào.",exampleEnglish:"This is extremely important.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-78",chinese:"特别",pinyin:"tèbié",english:"Especially / Particularly",exampleChinese:"我特别喜欢这个。",examplePinyin:"Wǒ tèbié xǐhuan zhège.",exampleEnglish:"I especially like this.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-79",chinese:"太",pinyin:"tài",english:"Too / Very",exampleChinese:"太好了！",examplePinyin:"Tài hǎo le!",exampleEnglish:"Great! / Too good!",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-80",chinese:"更",pinyin:"gèng",english:"More / Even more",exampleChinese:"这个更好。",examplePinyin:"Zhège gèng hǎo.",exampleEnglish:"This one is better.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-81",chinese:"最",pinyin:"zuì",english:"Most / -est",exampleChinese:"这是最好的。",examplePinyin:"Zhè shì zuì hǎo de.",exampleEnglish:"This is the best.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-82",chinese:"比较",pinyin:"bǐjiào",english:"Relatively / Fairly",exampleChinese:"今天比较冷。",examplePinyin:"Jīntiān bǐjiào lěng.",exampleEnglish:"Today is relatively cold.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-83",chinese:"挺",pinyin:"tǐng",english:"Quite / Rather",exampleChinese:"这个挺好的。",examplePinyin:"Zhège tǐng hǎo de.",exampleEnglish:"This is quite good.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-84",chinese:"稍微",pinyin:"shāowēi",english:"Slightly / A bit",exampleChinese:"请稍微等一下。",examplePinyin:"Qǐng shāowēi děng yīxià.",exampleEnglish:"Please wait a bit.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-85",chinese:"刚才",pinyin:"gāngcái",english:"Just now",exampleChinese:"他刚才还在这里。",examplePinyin:"Tā gāngcái hái zài zhèlǐ.",exampleEnglish:"He was just here.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-86",chinese:"马上",pinyin:"mǎshàng",english:"Right away / Immediately",exampleChinese:"我马上就来。",examplePinyin:"Wǒ mǎshàng jiù lái.",exampleEnglish:"I'll come right away.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-87",chinese:"已经",pinyin:"yǐjīng",english:"Already",exampleChinese:"我已经吃了。",examplePinyin:"Wǒ yǐjīng chī le.",exampleEnglish:"I've already eaten.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-88",chinese:"还",pinyin:"hái",english:"Still / Also",exampleChinese:"我还在这里。",examplePinyin:"Wǒ hái zài zhèlǐ.",exampleEnglish:"I'm still here.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-89",chinese:"刚",pinyin:"gāng",english:"Just",exampleChinese:"我刚到。",examplePinyin:"Wǒ gāng dào.",exampleEnglish:"I just arrived.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-90",chinese:"才",pinyin:"cái",english:"Only then / Just",exampleChinese:"他才来。",examplePinyin:"Tā cái lái.",exampleEnglish:"He just came.",category:"pronouns",status:"not_seen"},
+  // Additional useful words (91-100)
+  {id:"pronouns-91",chinese:"再",pinyin:"zài",english:"Again / Then",exampleChinese:"请再说一遍。",examplePinyin:"Qǐng zài shuō yī biàn.",exampleEnglish:"Please say it again.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-92",chinese:"就",pinyin:"jiù",english:"Then / Only",exampleChinese:"我就在这里。",examplePinyin:"Wǒ jiù zài zhèlǐ.",exampleEnglish:"I'm right here.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-93",chinese:"只",pinyin:"zhǐ",english:"Only",exampleChinese:"我只有一个。",examplePinyin:"Wǒ zhǐ yǒu yī gè.",exampleEnglish:"I only have one.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-94",chinese:"也",pinyin:"yě",english:"Also / Too",exampleChinese:"我也去。",examplePinyin:"Wǒ yě qù.",exampleEnglish:"I'm going too.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-95",chinese:"都",pinyin:"dōu",english:"All / Both",exampleChinese:"我们都去。",examplePinyin:"Wǒmen dōu qù.",exampleEnglish:"We all go.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-96",chinese:"一起",pinyin:"yīqǐ",english:"Together",exampleChinese:"我们一起去吧。",examplePinyin:"Wǒmen yīqǐ qù ba.",exampleEnglish:"Let's go together.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-97",chinese:"一定",pinyin:"yīdìng",english:"Definitely / Must",exampleChinese:"你一定要来。",examplePinyin:"Nǐ yīdìng yào lái.",exampleEnglish:"You must come.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-98",chinese:"可能",pinyin:"kěnéng",english:"Maybe / Possibly",exampleChinese:"可能会下雨。",examplePinyin:"Kěnéng huì xiàyǔ.",exampleEnglish:"It might rain.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-99",chinese:"也许",pinyin:"yěxǔ",english:"Perhaps / Maybe",exampleChinese:"也许明天去。",examplePinyin:"Yěxǔ míngtiān qù.",exampleEnglish:"Perhaps go tomorrow.",category:"pronouns",status:"not_seen"},
+  {id:"pronouns-100",chinese:"当然",pinyin:"dāngrán",english:"Of course",exampleChinese:"当然可以！",examplePinyin:"Dāngrán kěyǐ!",exampleEnglish:"Of course you can!",category:"pronouns",status:"not_seen"}
 ];

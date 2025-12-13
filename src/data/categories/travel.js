@@ -1,4 +1,4 @@
-// Travel Vocabulary - Expanded (80 words)
+// Travel Vocabulary - Expanded (100 words)
 export const travelData = [
   // Transportation (1-20)
   {id:"travel-1",chinese:"飞机",pinyin:"fēijī",english:"Airplane",exampleChinese:"我坐飞机去北京。",examplePinyin:"Wǒ zuò fēijī qù běijīng.",exampleEnglish:"I'm taking a plane to Beijing.",category:"travel",status:"not_seen"},
@@ -84,5 +84,26 @@ export const travelData = [
   {id:"travel-77",chinese:"湖",pinyin:"hú",english:"Lake",exampleChinese:"湖边很凉快。",examplePinyin:"Hú biān hěn liángkuai.",exampleEnglish:"It's cool by the lake.",category:"travel",status:"not_seen"},
   {id:"travel-78",chinese:"河",pinyin:"hé",english:"River",exampleChinese:"这条河很长。",examplePinyin:"Zhè tiáo hé hěn cháng.",exampleEnglish:"This river is very long.",category:"travel",status:"not_seen"},
   {id:"travel-79",chinese:"公园",pinyin:"gōngyuán",english:"Park",exampleChinese:"公园里人很多。",examplePinyin:"Gōngyuán lǐ rén hěn duō.",exampleEnglish:"There are many people in the park.",category:"travel",status:"not_seen"},
-  {id:"travel-80",chinese:"寺庙",pinyin:"sìmiào",english:"Temple",exampleChinese:"这座寺庙很古老。",examplePinyin:"Zhè zuò sìmiào hěn gǔlǎo.",exampleEnglish:"This temple is very ancient.",category:"travel",status:"not_seen"}
+  {id:"travel-80",chinese:"寺庙",pinyin:"sìmiào",english:"Temple",exampleChinese:"这座寺庙很古老。",examplePinyin:"Zhè zuò sìmiào hěn gǔlǎo.",exampleEnglish:"This temple is very ancient.",category:"travel",status:"not_seen"},
+  // Additional Travel Vocabulary (81-100)
+  {id:"travel-81",chinese:"长城",pinyin:"chángchéng",english:"Great Wall",exampleChinese:"长城很壮观。",examplePinyin:"Chángchéng hěn zhuàngguān.",exampleEnglish:"The Great Wall is magnificent.",category:"travel",status:"not_seen"},
+  {id:"travel-82",chinese:"故宫",pinyin:"gùgōng",english:"Forbidden City",exampleChinese:"故宫是明清皇宫。",examplePinyin:"Gùgōng shì míng qīng huánggōng.",exampleEnglish:"The Forbidden City was the Ming and Qing palace.",category:"travel",status:"not_seen"},
+  {id:"travel-83",chinese:"租车",pinyin:"zū chē",english:"Rent a car",exampleChinese:"我们在这里租车。",examplePinyin:"Wǒmen zài zhèlǐ zū chē.",exampleEnglish:"We're renting a car here.",category:"travel",status:"not_seen"},
+  {id:"travel-84",chinese:"行程",pinyin:"xíngchéng",english:"Itinerary / Schedule",exampleChinese:"今天的行程很满。",examplePinyin:"Jīntiān de xíngchéng hěn mǎn.",exampleEnglish:"Today's schedule is very full.",category:"travel",status:"not_seen"},
+  {id:"travel-85",chinese:"航班",pinyin:"hángbān",english:"Flight",exampleChinese:"航班延误了。",examplePinyin:"Hángbān yánwù le.",exampleEnglish:"The flight is delayed.",category:"travel",status:"not_seen"},
+  {id:"travel-86",chinese:"行李托运",pinyin:"xíngli tuōyùn",english:"Check-in luggage",exampleChinese:"需要行李托运吗？",examplePinyin:"Xūyào xíngli tuōyùn ma?",exampleEnglish:"Do you need to check in luggage?",category:"travel",status:"not_seen"},
+  {id:"travel-87",chinese:"随身行李",pinyin:"suíshēn xíngli",english:"Carry-on luggage",exampleChinese:"这是我的随身行李。",examplePinyin:"Zhè shì wǒ de suíshēn xíngli.",exampleEnglish:"This is my carry-on luggage.",category:"travel",status:"not_seen"},
+  {id:"travel-88",chinese:"转机",pinyin:"zhuǎnjī",english:"Transfer flight / Connection",exampleChinese:"我需要在香港转机。",examplePinyin:"Wǒ xūyào zài xiānggǎng zhuǎnjī.",exampleEnglish:"I need to transfer in Hong Kong.",category:"travel",status:"not_seen"},
+  {id:"travel-89",chinese:"直飞",pinyin:"zhífēi",english:"Direct flight",exampleChinese:"有直飞的航班吗？",examplePinyin:"Yǒu zhífēi de hángbān ma?",exampleEnglish:"Is there a direct flight?",category:"travel",status:"not_seen"},
+  {id:"travel-90",chinese:"观光",pinyin:"guānguāng",english:"Sightseeing",exampleChinese:"我们去观光。",examplePinyin:"Wǒmen qù guānguāng.",exampleEnglish:"Let's go sightseeing.",category:"travel",status:"not_seen"},
+  {id:"travel-91",chinese:"拍照",pinyin:"pāizhào",english:"Take photos",exampleChinese:"这里可以拍照吗？",examplePinyin:"Zhèlǐ kěyǐ pāizhào ma?",exampleEnglish:"Can we take photos here?",category:"travel",status:"not_seen"},
+  {id:"travel-92",chinese:"旅游团",pinyin:"lǚyóu tuán",english:"Tour group",exampleChinese:"我们参加旅游团。",examplePinyin:"Wǒmen cānjiā lǚyóu tuán.",exampleEnglish:"We're joining a tour group.",category:"travel",status:"not_seen"},
+  {id:"travel-93",chinese:"自由行",pinyin:"zìyóu xíng",english:"Independent travel",exampleChinese:"我喜欢自由行。",examplePinyin:"Wǒ xǐhuan zìyóu xíng.",exampleEnglish:"I like independent travel.",category:"travel",status:"not_seen"},
+  {id:"travel-94",chinese:"背包客",pinyin:"bēibāokè",english:"Backpacker",exampleChinese:"他是一个背包客。",examplePinyin:"Tā shì yī gè bēibāokè.",exampleEnglish:"He is a backpacker.",category:"travel",status:"not_seen"},
+  {id:"travel-95",chinese:"青年旅舍",pinyin:"qīngnián lǚshè",english:"Youth hostel",exampleChinese:"青年旅舍很便宜。",examplePinyin:"Qīngnián lǚshè hěn piányi.",exampleEnglish:"Youth hostels are very cheap.",category:"travel",status:"not_seen"},
+  {id:"travel-96",chinese:"民宿",pinyin:"mínsù",english:"Homestay / Guesthouse",exampleChinese:"我订了一个民宿。",examplePinyin:"Wǒ dìng le yī gè mínsù.",exampleEnglish:"I booked a homestay.",category:"travel",status:"not_seen"},
+  {id:"travel-97",chinese:"五星级酒店",pinyin:"wǔ xīngjí jiǔdiàn",english:"Five-star hotel",exampleChinese:"这是五星级酒店。",examplePinyin:"Zhè shì wǔ xīngjí jiǔdiàn.",exampleEnglish:"This is a five-star hotel.",category:"travel",status:"not_seen"},
+  {id:"travel-98",chinese:"特产",pinyin:"tèchǎn",english:"Local specialty",exampleChinese:"这是本地特产。",examplePinyin:"Zhè shì běndì tèchǎn.",exampleEnglish:"This is a local specialty.",category:"travel",status:"not_seen"},
+  {id:"travel-99",chinese:"购物",pinyin:"gòuwù",english:"Shopping",exampleChinese:"我们去购物。",examplePinyin:"Wǒmen qù gòuwù.",exampleEnglish:"Let's go shopping.",category:"travel",status:"not_seen"},
+  {id:"travel-100",chinese:"退税",pinyin:"tuìshuì",english:"Tax refund",exampleChinese:"在哪里可以退税？",examplePinyin:"Zài nǎlǐ kěyǐ tuìshuì?",exampleEnglish:"Where can I get a tax refund?",category:"travel",status:"not_seen"}
 ];

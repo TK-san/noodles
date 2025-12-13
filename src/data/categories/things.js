@@ -1,4 +1,4 @@
-// Everyday Things - Expanded (60 words)
+// Everyday Things - Expanded (100 words)
 export const thingsData = [
   // Technology (1-12)
   {id:"things-1",chinese:"电话",pinyin:"diànhuà",english:"Phone / Telephone",exampleChinese:"你的电话号码是多少？",examplePinyin:"Nǐ de diànhuà hàomǎ shì duōshao?",exampleEnglish:"What's your phone number?",category:"things",status:"not_seen"},
@@ -64,5 +64,49 @@ export const thingsData = [
   {id:"things-57",chinese:"面包",pinyin:"miànbāo",english:"Bread",exampleChinese:"早餐吃面包。",examplePinyin:"Zǎocān chī miànbāo.",exampleEnglish:"Have bread for breakfast.",category:"things",status:"not_seen"},
   {id:"things-58",chinese:"蛋糕",pinyin:"dàngāo",english:"Cake",exampleChinese:"生日蛋糕很漂亮。",examplePinyin:"Shēngrì dàngāo hěn piàoliang.",exampleEnglish:"The birthday cake is beautiful.",category:"things",status:"not_seen"},
   {id:"things-59",chinese:"糖",pinyin:"táng",english:"Sugar / Candy",exampleChinese:"你要加糖吗？",examplePinyin:"Nǐ yào jiā táng ma?",exampleEnglish:"Do you want to add sugar?",category:"things",status:"not_seen"},
-  {id:"things-60",chinese:"盐",pinyin:"yán",english:"Salt",exampleChinese:"请给我一点盐。",examplePinyin:"Qǐng gěi wǒ yīdiǎn yán.",exampleEnglish:"Please give me some salt.",category:"things",status:"not_seen"}
+  {id:"things-60",chinese:"盐",pinyin:"yán",english:"Salt",exampleChinese:"请给我一点盐。",examplePinyin:"Qǐng gěi wǒ yīdiǎn yán.",exampleEnglish:"Please give me some salt.",category:"things",status:"not_seen"},
+  // More Technology & Electronics (61-70)
+  {id:"things-61",chinese:"充电器",pinyin:"chōngdiànqì",english:"Charger",exampleChinese:"我忘记带充电器了。",examplePinyin:"Wǒ wàngjì dài chōngdiànqì le.",exampleEnglish:"I forgot to bring my charger.",category:"things",status:"not_seen"},
+  {id:"things-62",chinese:"耳机",pinyin:"ěrjī",english:"Headphones / Earphones",exampleChinese:"我的耳机坏了。",examplePinyin:"Wǒ de ěrjī huài le.",exampleEnglish:"My headphones are broken.",category:"things",status:"not_seen"},
+  {id:"things-63",chinese:"键盘",pinyin:"jiànpán",english:"Keyboard",exampleChinese:"键盘在桌子上。",examplePinyin:"Jiànpán zài zhuōzi shàng.",exampleEnglish:"The keyboard is on the desk.",category:"things",status:"not_seen"},
+  {id:"things-64",chinese:"鼠标",pinyin:"shǔbiāo",english:"Mouse",exampleChinese:"我需要一个新鼠标。",examplePinyin:"Wǒ xūyào yī gè xīn shǔbiāo.",exampleEnglish:"I need a new mouse.",category:"things",status:"not_seen"},
+  {id:"things-65",chinese:"屏幕",pinyin:"píngmù",english:"Screen",exampleChinese:"屏幕太小了。",examplePinyin:"Píngmù tài xiǎo le.",exampleEnglish:"The screen is too small.",category:"things",status:"not_seen"},
+  {id:"things-66",chinese:"打印机",pinyin:"dǎyìnjī",english:"Printer",exampleChinese:"打印机没纸了。",examplePinyin:"Dǎyìnjī méi zhǐ le.",exampleEnglish:"The printer is out of paper.",category:"things",status:"not_seen"},
+  {id:"things-67",chinese:"U盘",pinyin:"U pán",english:"USB flash drive",exampleChinese:"文件在U盘里。",examplePinyin:"Wénjiàn zài U pán lǐ.",exampleEnglish:"The files are on the USB drive.",category:"things",status:"not_seen"},
+  {id:"things-68",chinese:"音响",pinyin:"yīnxiǎng",english:"Speaker / Audio system",exampleChinese:"这个音响很贵。",examplePinyin:"Zhège yīnxiǎng hěn guì.",exampleEnglish:"This speaker system is expensive.",category:"things",status:"not_seen"},
+  {id:"things-69",chinese:"遥控器",pinyin:"yáokòngqì",english:"Remote control",exampleChinese:"遥控器在哪里？",examplePinyin:"Yáokòngqì zài nǎlǐ?",exampleEnglish:"Where is the remote control?",category:"things",status:"not_seen"},
+  {id:"things-70",chinese:"插座",pinyin:"chāzuò",english:"Socket / Power outlet",exampleChinese:"这里有插座吗？",examplePinyin:"Zhèlǐ yǒu chāzuò ma?",exampleEnglish:"Is there a socket here?",category:"things",status:"not_seen"},
+  // Clothing & Accessories (71-80)
+  {id:"things-71",chinese:"裤子",pinyin:"kùzi",english:"Trousers / Pants",exampleChinese:"这条裤子很合适。",examplePinyin:"Zhè tiáo kùzi hěn héshì.",exampleEnglish:"These pants fit well.",category:"things",status:"not_seen"},
+  {id:"things-72",chinese:"裙子",pinyin:"qúnzi",english:"Skirt / Dress",exampleChinese:"她的裙子很漂亮。",examplePinyin:"Tā de qúnzi hěn piàoliang.",exampleEnglish:"Her dress is beautiful.",category:"things",status:"not_seen"},
+  {id:"things-73",chinese:"外套",pinyin:"wàitào",english:"Coat / Jacket",exampleChinese:"天冷要穿外套。",examplePinyin:"Tiān lěng yào chuān wàitào.",exampleEnglish:"Wear a coat when it's cold.",category:"things",status:"not_seen"},
+  {id:"things-74",chinese:"围巾",pinyin:"wéijīn",english:"Scarf",exampleChinese:"这条围巾很暖和。",examplePinyin:"Zhè tiáo wéijīn hěn nuǎnhuo.",exampleEnglish:"This scarf is very warm.",category:"things",status:"not_seen"},
+  {id:"things-75",chinese:"手套",pinyin:"shǒutào",english:"Gloves",exampleChinese:"冬天要戴手套。",examplePinyin:"Dōngtiān yào dài shǒutào.",exampleEnglish:"Wear gloves in winter.",category:"things",status:"not_seen"},
+  {id:"things-76",chinese:"袜子",pinyin:"wàzi",english:"Socks",exampleChinese:"我需要买新袜子。",examplePinyin:"Wǒ xūyào mǎi xīn wàzi.",exampleEnglish:"I need to buy new socks.",category:"things",status:"not_seen"},
+  {id:"things-77",chinese:"项链",pinyin:"xiàngliàn",english:"Necklace",exampleChinese:"这条项链是金的。",examplePinyin:"Zhè tiáo xiàngliàn shì jīn de.",exampleEnglish:"This necklace is made of gold.",category:"things",status:"not_seen"},
+  {id:"things-78",chinese:"戒指",pinyin:"jièzhi",english:"Ring",exampleChinese:"结婚要戴戒指。",examplePinyin:"Jiéhūn yào dài jièzhi.",exampleEnglish:"You wear a ring when getting married.",category:"things",status:"not_seen"},
+  {id:"things-79",chinese:"耳环",pinyin:"ěrhuán",english:"Earrings",exampleChinese:"她的耳环很特别。",examplePinyin:"Tā de ěrhuán hěn tèbié.",exampleEnglish:"Her earrings are special.",category:"things",status:"not_seen"},
+  {id:"things-80",chinese:"皮带",pinyin:"pídài",english:"Belt",exampleChinese:"这条皮带是皮革的。",examplePinyin:"Zhè tiáo pídài shì pígé de.",exampleEnglish:"This belt is made of leather.",category:"things",status:"not_seen"},
+  // More Household Items (81-90)
+  {id:"things-81",chinese:"冰箱",pinyin:"bīngxiāng",english:"Refrigerator",exampleChinese:"食物放在冰箱里。",examplePinyin:"Shíwù fàng zài bīngxiāng lǐ.",exampleEnglish:"Put the food in the refrigerator.",category:"things",status:"not_seen"},
+  {id:"things-82",chinese:"洗衣机",pinyin:"xǐyījī",english:"Washing machine",exampleChinese:"洗衣机坏了。",examplePinyin:"Xǐyījī huài le.",exampleEnglish:"The washing machine is broken.",category:"things",status:"not_seen"},
+  {id:"things-83",chinese:"微波炉",pinyin:"wēibōlú",english:"Microwave oven",exampleChinese:"用微波炉热饭。",examplePinyin:"Yòng wēibōlú rè fàn.",exampleEnglish:"Heat the food in the microwave.",category:"things",status:"not_seen"},
+  {id:"things-84",chinese:"烤箱",pinyin:"kǎoxiāng",english:"Oven",exampleChinese:"用烤箱烤蛋糕。",examplePinyin:"Yòng kǎoxiāng kǎo dàngāo.",exampleEnglish:"Bake the cake in the oven.",category:"things",status:"not_seen"},
+  {id:"things-85",chinese:"吸尘器",pinyin:"xīchénqì",english:"Vacuum cleaner",exampleChinese:"用吸尘器打扫房间。",examplePinyin:"Yòng xīchénqì dǎsǎo fángjiān.",exampleEnglish:"Clean the room with the vacuum cleaner.",category:"things",status:"not_seen"},
+  {id:"things-86",chinese:"垃圾桶",pinyin:"lājī tǒng",english:"Trash can / Rubbish bin",exampleChinese:"把垃圾扔到垃圾桶里。",examplePinyin:"Bǎ lājī rēng dào lājī tǒng lǐ.",exampleEnglish:"Throw the trash in the bin.",category:"things",status:"not_seen"},
+  {id:"things-87",chinese:"毛巾",pinyin:"máojīn",english:"Towel",exampleChinese:"请给我一条干净的毛巾。",examplePinyin:"Qǐng gěi wǒ yī tiáo gānjìng de máojīn.",exampleEnglish:"Please give me a clean towel.",category:"things",status:"not_seen"},
+  {id:"things-88",chinese:"牙刷",pinyin:"yáshuā",english:"Toothbrush",exampleChinese:"每天要用牙刷刷牙。",examplePinyin:"Měitiān yào yòng yáshuā shuā yá.",exampleEnglish:"Brush your teeth with a toothbrush every day.",category:"things",status:"not_seen"},
+  {id:"things-89",chinese:"牙膏",pinyin:"yágāo",english:"Toothpaste",exampleChinese:"牙膏用完了。",examplePinyin:"Yágāo yòng wán le.",exampleEnglish:"The toothpaste is all used up.",category:"things",status:"not_seen"},
+  {id:"things-90",chinese:"肥皂",pinyin:"féizào",english:"Soap",exampleChinese:"洗手要用肥皂。",examplePinyin:"Xǐ shǒu yào yòng féizào.",exampleEnglish:"Use soap to wash your hands.",category:"things",status:"not_seen"},
+  // Documents & Stationery (91-100)
+  {id:"things-91",chinese:"护照",pinyin:"hùzhào",english:"Passport",exampleChinese:"出国要带护照。",examplePinyin:"Chūguó yào dài hùzhào.",exampleEnglish:"You need a passport to go abroad.",category:"things",status:"not_seen"},
+  {id:"things-92",chinese:"证件",pinyin:"zhèngjiàn",english:"ID / Documents",exampleChinese:"请出示您的证件。",examplePinyin:"Qǐng chūshì nín de zhèngjiàn.",exampleEnglish:"Please show your ID.",category:"things",status:"not_seen"},
+  {id:"things-93",chinese:"地图",pinyin:"dìtú",english:"Map",exampleChinese:"我需要一张地图。",examplePinyin:"Wǒ xūyào yī zhāng dìtú.",exampleEnglish:"I need a map.",category:"things",status:"not_seen"},
+  {id:"things-94",chinese:"本子",pinyin:"běnzi",english:"Notebook",exampleChinese:"请给我一个本子。",examplePinyin:"Qǐng gěi wǒ yī gè běnzi.",exampleEnglish:"Please give me a notebook.",category:"things",status:"not_seen"},
+  {id:"things-95",chinese:"铅笔",pinyin:"qiānbǐ",english:"Pencil",exampleChinese:"用铅笔写字。",examplePinyin:"Yòng qiānbǐ xiě zì.",exampleEnglish:"Write with a pencil.",category:"things",status:"not_seen"},
+  {id:"things-96",chinese:"橡皮",pinyin:"xiàngpí",english:"Eraser",exampleChinese:"我需要一块橡皮。",examplePinyin:"Wǒ xūyào yī kuài xiàngpí.",exampleEnglish:"I need an eraser.",category:"things",status:"not_seen"},
+  {id:"things-97",chinese:"尺子",pinyin:"chǐzi",english:"Ruler",exampleChinese:"用尺子画直线。",examplePinyin:"Yòng chǐzi huà zhíxiàn.",exampleEnglish:"Draw a straight line with a ruler.",category:"things",status:"not_seen"},
+  {id:"things-98",chinese:"剪刀",pinyin:"jiǎndāo",english:"Scissors",exampleChinese:"我需要用剪刀。",examplePinyin:"Wǒ xūyào yòng jiǎndāo.",exampleEnglish:"I need to use scissors.",category:"things",status:"not_seen"},
+  {id:"things-99",chinese:"胶水",pinyin:"jiāoshuǐ",english:"Glue",exampleChinese:"用胶水粘起来。",examplePinyin:"Yòng jiāoshuǐ zhān qǐlái.",exampleEnglish:"Glue it together.",category:"things",status:"not_seen"},
+  {id:"things-100",chinese:"信封",pinyin:"xìnfēng",english:"Envelope",exampleChinese:"把信放进信封里。",examplePinyin:"Bǎ xìn fàng jìn xìnfēng lǐ.",exampleEnglish:"Put the letter in the envelope.",category:"things",status:"not_seen"}
 ];

@@ -1,4 +1,4 @@
-// People & Places - Expanded (60 words)
+// People & Places - Expanded (100 words)
 export const peoplePlacesData = [
   // Family (1-15)
   {id:"people-1",chinese:"人",pinyin:"rén",english:"Person / People",exampleChinese:"中国人很友好。",examplePinyin:"Zhōngguó rén hěn yǒuhǎo.",exampleEnglish:"Chinese people are friendly.",category:"peoplePlaces",status:"not_seen"},
@@ -64,5 +64,49 @@ export const peoplePlacesData = [
   {id:"people-57",chinese:"电影院",pinyin:"diànyǐngyuàn",english:"Cinema / Movie theater",exampleChinese:"我们去电影院吧。",examplePinyin:"Wǒmen qù diànyǐngyuàn ba.",exampleEnglish:"Let's go to the cinema.",category:"peoplePlaces",status:"not_seen"},
   {id:"people-58",chinese:"图书馆",pinyin:"túshūguǎn",english:"Library",exampleChinese:"图书馆很安静。",examplePinyin:"Túshūguǎn hěn ānjìng.",exampleEnglish:"The library is very quiet.",category:"peoplePlaces",status:"not_seen"},
   {id:"people-59",chinese:"机场",pinyin:"jīchǎng",english:"Airport",exampleChinese:"机场在哪里？",examplePinyin:"Jīchǎng zài nǎlǐ?",exampleEnglish:"Where is the airport?",category:"peoplePlaces",status:"not_seen"},
-  {id:"people-60",chinese:"火车站",pinyin:"huǒchē zhàn",english:"Train station",exampleChinese:"去火车站怎么走？",examplePinyin:"Qù huǒchē zhàn zěnme zǒu?",exampleEnglish:"How do I get to the train station?",category:"peoplePlaces",status:"not_seen"}
+  {id:"people-60",chinese:"火车站",pinyin:"huǒchē zhàn",english:"Train station",exampleChinese:"去火车站怎么走？",examplePinyin:"Qù huǒchē zhàn zěnme zǒu?",exampleEnglish:"How do I get to the train station?",category:"peoplePlaces",status:"not_seen"},
+  // Extended Family & Relationships (61-70)
+  {id:"people-61",chinese:"外公",pinyin:"wàigōng",english:"Grandfather (maternal)",exampleChinese:"我外公住在上海。",examplePinyin:"Wǒ wàigōng zhù zài shànghǎi.",exampleEnglish:"My maternal grandfather lives in Shanghai.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-62",chinese:"外婆",pinyin:"wàipó",english:"Grandmother (maternal)",exampleChinese:"外婆很疼我。",examplePinyin:"Wàipó hěn téng wǒ.",exampleEnglish:"My maternal grandma loves me very much.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-63",chinese:"叔叔",pinyin:"shūshu",english:"Uncle (father's younger brother)",exampleChinese:"我叔叔在北京工作。",examplePinyin:"Wǒ shūshu zài běijīng gōngzuò.",exampleEnglish:"My uncle works in Beijing.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-64",chinese:"阿姨",pinyin:"āyí",english:"Aunt / Auntie",exampleChinese:"阿姨对我很好。",examplePinyin:"Āyí duì wǒ hěn hǎo.",exampleEnglish:"My aunt is very good to me.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-65",chinese:"表哥",pinyin:"biǎogē",english:"Older male cousin",exampleChinese:"我表哥今年大学毕业。",examplePinyin:"Wǒ biǎogē jīnnián dàxué bìyè.",exampleEnglish:"My cousin is graduating from college this year.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-66",chinese:"表姐",pinyin:"biǎojiě",english:"Older female cousin",exampleChinese:"表姐是医生。",examplePinyin:"Biǎojiě shì yīshēng.",exampleEnglish:"My cousin is a doctor.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-67",chinese:"侄子",pinyin:"zhízi",english:"Nephew",exampleChinese:"我侄子很聪明。",examplePinyin:"Wǒ zhízi hěn cōngming.",exampleEnglish:"My nephew is very smart.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-68",chinese:"侄女",pinyin:"zhínǚ",english:"Niece",exampleChinese:"侄女刚出生。",examplePinyin:"Zhínǚ gāng chūshēng.",exampleEnglish:"My niece was just born.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-69",chinese:"亲戚",pinyin:"qīnqi",english:"Relative",exampleChinese:"过年要去拜访亲戚。",examplePinyin:"Guònián yào qù bàifǎng qīnqi.",exampleEnglish:"We need to visit relatives during Chinese New Year.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-70",chinese:"客人",pinyin:"kèrén",english:"Guest / Customer",exampleChinese:"今天有客人来。",examplePinyin:"Jīntiān yǒu kèrén lái.",exampleEnglish:"We have guests coming today.",category:"peoplePlaces",status:"not_seen"},
+  // More Places (71-85)
+  {id:"people-71",chinese:"宿舍",pinyin:"sùshè",english:"Dormitory",exampleChinese:"学生宿舍在那边。",examplePinyin:"Xuésheng sùshè zài nàbiān.",exampleEnglish:"The student dormitory is over there.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-72",chinese:"公园",pinyin:"gōngyuán",english:"Park",exampleChinese:"周末去公园散步。",examplePinyin:"Zhōumò qù gōngyuán sànbù.",exampleEnglish:"Go for a walk in the park on weekends.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-73",chinese:"邮局",pinyin:"yóujú",english:"Post office",exampleChinese:"邮局在哪里？",examplePinyin:"Yóujú zài nǎlǐ?",exampleEnglish:"Where is the post office?",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-74",chinese:"警察局",pinyin:"jǐngchájú",english:"Police station",exampleChinese:"我要去警察局报案。",examplePinyin:"Wǒ yào qù jǐngchájú bào'àn.",exampleEnglish:"I need to go to the police station to report.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-75",chinese:"大使馆",pinyin:"dàshǐguǎn",english:"Embassy",exampleChinese:"美国大使馆在这里。",examplePinyin:"Měiguó dàshǐguǎn zài zhèlǐ.",exampleEnglish:"The US Embassy is here.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-76",chinese:"体育馆",pinyin:"tǐyùguǎn",english:"Gymnasium / Sports center",exampleChinese:"体育馆里可以打篮球。",examplePinyin:"Tǐyùguǎn lǐ kěyǐ dǎ lánqiú.",exampleEnglish:"You can play basketball in the gymnasium.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-77",chinese:"博物馆",pinyin:"bówùguǎn",english:"Museum",exampleChinese:"这个博物馆很有名。",examplePinyin:"Zhège bówùguǎn hěn yǒumíng.",exampleEnglish:"This museum is very famous.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-78",chinese:"美术馆",pinyin:"měishùguǎn",english:"Art gallery",exampleChinese:"美术馆有展览。",examplePinyin:"Měishùguǎn yǒu zhǎnlǎn.",exampleEnglish:"The art gallery has an exhibition.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-79",chinese:"寺庙",pinyin:"sìmiào",english:"Temple",exampleChinese:"这座寺庙很古老。",examplePinyin:"Zhè zuò sìmiào hěn gǔlǎo.",exampleEnglish:"This temple is very ancient.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-80",chinese:"教堂",pinyin:"jiàotáng",english:"Church",exampleChinese:"教堂在山上。",examplePinyin:"Jiàotáng zài shān shàng.",exampleEnglish:"The church is on the hill.",category:"peoplePlaces",status:"not_seen"},
+  // More Countries & Cities (81-90)
+  {id:"people-81",chinese:"法国",pinyin:"fǎguó",english:"France",exampleChinese:"我想去法国旅行。",examplePinyin:"Wǒ xiǎng qù fǎguó lǚxíng.",exampleEnglish:"I want to travel to France.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-82",chinese:"德国",pinyin:"déguó",english:"Germany",exampleChinese:"德国啤酒很有名。",examplePinyin:"Déguó píjiǔ hěn yǒumíng.",exampleEnglish:"German beer is very famous.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-83",chinese:"韩国",pinyin:"hánguó",english:"South Korea",exampleChinese:"韩国菜很辣。",examplePinyin:"Hánguó cài hěn là.",exampleEnglish:"Korean food is very spicy.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-84",chinese:"泰国",pinyin:"tàiguó",english:"Thailand",exampleChinese:"泰国很热。",examplePinyin:"Tàiguó hěn rè.",exampleEnglish:"Thailand is very hot.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-85",chinese:"澳大利亚",pinyin:"àodàlìyà",english:"Australia",exampleChinese:"澳大利亚有袋鼠。",examplePinyin:"Àodàlìyà yǒu dàishǔ.",exampleEnglish:"Australia has kangaroos.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-86",chinese:"广州",pinyin:"guǎngzhōu",english:"Guangzhou",exampleChinese:"广州的早茶很有名。",examplePinyin:"Guǎngzhōu de zǎochá hěn yǒumíng.",exampleEnglish:"Guangzhou's dim sum is very famous.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-87",chinese:"深圳",pinyin:"shēnzhèn",english:"Shenzhen",exampleChinese:"深圳是年轻的城市。",examplePinyin:"Shēnzhèn shì niánqīng de chéngshì.",exampleEnglish:"Shenzhen is a young city.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-88",chinese:"成都",pinyin:"chéngdū",english:"Chengdu",exampleChinese:"成都有大熊猫。",examplePinyin:"Chéngdū yǒu dàxióngmāo.",exampleEnglish:"Chengdu has giant pandas.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-89",chinese:"西安",pinyin:"xī'ān",english:"Xi'an",exampleChinese:"西安有兵马俑。",examplePinyin:"Xī'ān yǒu bīngmǎyǒng.",exampleEnglish:"Xi'an has the Terracotta Warriors.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-90",chinese:"杭州",pinyin:"hángzhōu",english:"Hangzhou",exampleChinese:"杭州有西湖。",examplePinyin:"Hángzhōu yǒu xīhú.",exampleEnglish:"Hangzhou has West Lake.",category:"peoplePlaces",status:"not_seen"},
+  // More Professions (91-100)
+  {id:"people-91",chinese:"厨师",pinyin:"chúshī",english:"Chef / Cook",exampleChinese:"这个厨师做菜很好吃。",examplePinyin:"Zhège chúshī zuò cài hěn hǎochī.",exampleEnglish:"This chef cooks delicious food.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-92",chinese:"会计",pinyin:"kuàijì",english:"Accountant",exampleChinese:"她是会计。",examplePinyin:"Tā shì kuàijì.",exampleEnglish:"She is an accountant.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-93",chinese:"设计师",pinyin:"shèjìshī",english:"Designer",exampleChinese:"我的朋友是设计师。",examplePinyin:"Wǒ de péngyou shì shèjìshī.",exampleEnglish:"My friend is a designer.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-94",chinese:"记者",pinyin:"jìzhě",english:"Reporter / Journalist",exampleChinese:"他是一名记者。",examplePinyin:"Tā shì yī míng jìzhě.",exampleEnglish:"He is a reporter.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-95",chinese:"演员",pinyin:"yǎnyuán",english:"Actor / Actress",exampleChinese:"她想当演员。",examplePinyin:"Tā xiǎng dāng yǎnyuán.",exampleEnglish:"She wants to be an actress.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-96",chinese:"歌手",pinyin:"gēshǒu",english:"Singer",exampleChinese:"这个歌手很有名。",examplePinyin:"Zhège gēshǒu hěn yǒumíng.",exampleEnglish:"This singer is very famous.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-97",chinese:"画家",pinyin:"huàjiā",english:"Painter / Artist",exampleChinese:"他是著名的画家。",examplePinyin:"Tā shì zhùmíng de huàjiā.",exampleEnglish:"He is a famous painter.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-98",chinese:"运动员",pinyin:"yùndòngyuán",english:"Athlete",exampleChinese:"他是职业运动员。",examplePinyin:"Tā shì zhíyè yùndòngyuán.",exampleEnglish:"He is a professional athlete.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-99",chinese:"翻译",pinyin:"fānyì",english:"Translator / Interpreter",exampleChinese:"我需要一个翻译。",examplePinyin:"Wǒ xūyào yī gè fānyì.",exampleEnglish:"I need a translator.",category:"peoplePlaces",status:"not_seen"},
+  {id:"people-100",chinese:"导游",pinyin:"dǎoyóu",english:"Tour guide",exampleChinese:"导游带我们参观。",examplePinyin:"Dǎoyóu dài wǒmen cānguān.",exampleEnglish:"The tour guide showed us around.",category:"peoplePlaces",status:"not_seen"}
 ];

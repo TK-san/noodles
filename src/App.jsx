@@ -4,6 +4,7 @@ import { HomeScreen } from './screens/HomeScreen';
 import { CategoryScreen } from './screens/CategoryScreen';
 import { FlashcardScreen } from './screens/FlashcardScreen';
 import { ProgressScreen } from './screens/ProgressScreen';
+import { LearnScreen } from './screens/LearnScreen';
 import { Navigation } from './components/Navigation';
 import { useProgress, useCategoryProgress } from './hooks/useProgress';
 import { categories } from './data/categories';
@@ -14,11 +15,12 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categoryWords, setCategoryWords] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [studyMode, setStudyMode] = useState(null); // 'quick-quiz', 'review-weak', or null
 
   const categoryProgress = useCategoryProgress(categories);
   const { words, updateWordStatus, stats, resetProgress } = useProgress(
     categoryWords,
-    selectedCategory || 'default'
+    selectedCategory || studyMode || 'default'
   );
 
   // Load category data when selected
@@ -35,6 +37,49 @@ function App() {
     }
   }, [selectedCategory]);
 
+  // Load words for study modes (quick quiz or review weak)
+  useEffect(() => {
+    if (studyMode && !selectedCategory) {
+      setIsLoading(true);
+      loadStudyModeWords(studyMode).then(data => {
+        setCategoryWords(data);
+        setIsLoading(false);
+      });
+    }
+  }, [studyMode, selectedCategory]);
+
+  // Function to load words for study modes
+  const loadStudyModeWords = async (mode) => {
+    // Load all words from all categories
+    const allWordsPromises = categories.map(cat => cat.getData());
+    const allWordsArrays = await Promise.all(allWordsPromises);
+    const allWords = allWordsArrays.flat();
+
+    if (mode === 'quick-quiz') {
+      // Shuffle and pick 10 random words
+      const shuffled = [...allWords].sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, 10);
+    } else if (mode === 'review-weak') {
+      // Get words that are in "learning" status from localStorage
+      const weakWords = allWords.filter(word => {
+        // Check each category's progress for this word
+        for (const cat of categories) {
+          const stored = localStorage.getItem(`noodles-progress-${cat.id}`);
+          if (stored) {
+            const progress = JSON.parse(stored);
+            if (progress[word.id] === 'learning') {
+              return true;
+            }
+          }
+        }
+        return false;
+      });
+      // Shuffle weak words
+      return weakWords.sort(() => Math.random() - 0.5);
+    }
+    return [];
+  };
+
   const handleNavigate = (screen) => {
     setCurrentScreen(screen);
   };
@@ -50,8 +95,28 @@ function App() {
 
   const handleBackToCategories = () => {
     setSelectedCategory(null);
+    setStudyMode(null);
     setCategoryWords([]);
     setCurrentScreen('categories');
+  };
+
+  const handleQuickQuiz = () => {
+    setSelectedCategory(null);
+    setStudyMode('quick-quiz');
+    setCurrentScreen('flashcard');
+  };
+
+  const handleReviewWeak = () => {
+    setSelectedCategory(null);
+    setStudyMode('review-weak');
+    setCurrentScreen('flashcard');
+  };
+
+  const handleBackToLearn = () => {
+    setSelectedCategory(null);
+    setStudyMode(null);
+    setCategoryWords([]);
+    setCurrentScreen('flashcard');
   };
 
   // Calculate total stats across all categories
@@ -96,9 +161,19 @@ function App() {
           words={words}
           stats={stats}
           onUpdateStatus={updateWordStatus}
-          categoryName={currentCategory?.name}
-          categoryIcon={currentCategory?.icon}
-          onBackToCategories={handleBackToCategories}
+          categoryName={studyMode === 'quick-quiz' ? 'Quick Quiz' : studyMode === 'review-weak' ? 'Review Weak Words' : currentCategory?.name}
+          categoryIcon={studyMode === 'quick-quiz' ? '🎲' : studyMode === 'review-weak' ? '🔄' : currentCategory?.icon}
+          onBackToCategories={handleBackToLearn}
+        />
+      )}
+
+      {!isLoading && currentScreen === 'flashcard' && words.length === 0 && !studyMode && (
+        <LearnScreen
+          onQuickQuiz={handleQuickQuiz}
+          onReviewWeak={handleReviewWeak}
+          onSelectCategory={handleBackToCategories}
+          totalStats={totalStats}
+          categoryProgress={categoryProgress}
         />
       )}
 

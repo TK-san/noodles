@@ -1,4 +1,4 @@
-// Numbers & Time - Expanded (65 words)
+// Numbers & Time - Expanded (100 words)
 export const numbersTimeData = [
   // Numbers 0-10 (1-11)
   {id:"numbers-1",chinese:"零",pinyin:"líng",english:"Zero",exampleChinese:"零度以下。",examplePinyin:"Líng dù yǐxià.",exampleEnglish:"Below zero degrees.",category:"numbersTime",status:"not_seen"},
@@ -70,5 +70,41 @@ export const numbersTimeData = [
   {id:"numbers-62",chinese:"刚才",pinyin:"gāngcái",english:"Just now",exampleChinese:"他刚才来了。",examplePinyin:"Tā gāngcái lái le.",exampleEnglish:"He just came.",category:"numbersTime",status:"not_seen"},
   {id:"numbers-63",chinese:"一会儿",pinyin:"yīhuìr",english:"A moment / Soon",exampleChinese:"一会儿见！",examplePinyin:"Yīhuìr jiàn!",exampleEnglish:"See you soon!",category:"numbersTime",status:"not_seen"},
   {id:"numbers-64",chinese:"经常",pinyin:"jīngcháng",english:"Often",exampleChinese:"我经常运动。",examplePinyin:"Wǒ jīngcháng yùndòng.",exampleEnglish:"I exercise often.",category:"numbersTime",status:"not_seen"},
-  {id:"numbers-65",chinese:"从来",pinyin:"cónglái",english:"Ever / Never (with neg)",exampleChinese:"我从来没去过。",examplePinyin:"Wǒ cónglái méi qù guò.",exampleEnglish:"I've never been there.",category:"numbersTime",status:"not_seen"}
+  {id:"numbers-65",chinese:"从来",pinyin:"cónglái",english:"Ever / Never (with neg)",exampleChinese:"我从来没去过。",examplePinyin:"Wǒ cónglái méi qù guò.",exampleEnglish:"I've never been there.",category:"numbersTime",status:"not_seen"},
+  // Intermediate Time & Numbers (66-100)
+  {id:"numbers-66",chinese:"下午",pinyin:"xiàwǔ",english:"Afternoon",exampleChinese:"下午三点开会。",examplePinyin:"Xiàwǔ sān diǎn kāihuì.",exampleEnglish:"Meeting at 3 PM.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-67",chinese:"凌晨",pinyin:"língchén",english:"Early morning (before dawn)",exampleChinese:"凌晨两点他还在工作。",examplePinyin:"Língchén liǎng diǎn tā hái zài gōngzuò.",exampleEnglish:"He was still working at 2 AM.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-68",chinese:"深夜",pinyin:"shēnyè",english:"Late night",exampleChinese:"深夜不要出门。",examplePinyin:"Shēnyè bùyào chūmén.",exampleEnglish:"Don't go out late at night.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-69",chinese:"黄昏",pinyin:"huánghūn",english:"Dusk / Twilight",exampleChinese:"黄昏时分很美。",examplePinyin:"Huánghūn shífēn hěn měi.",exampleEnglish:"Dusk is beautiful.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-70",chinese:"黎明",pinyin:"límíng",english:"Dawn",exampleChinese:"黎明前最黑暗。",examplePinyin:"Límíng qián zuì hēi'àn.",exampleEnglish:"It's darkest before dawn.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-71",chinese:"永远",pinyin:"yǒngyuǎn",english:"Forever",exampleChinese:"我永远爱你。",examplePinyin:"Wǒ yǒngyuǎn ài nǐ.",exampleEnglish:"I love you forever.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-72",chinese:"暂时",pinyin:"zànshí",english:"Temporarily",exampleChinese:"暂时没有消息。",examplePinyin:"Zànshí méiyǒu xiāoxi.",exampleEnglish:"No news for now.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-73",chinese:"立刻",pinyin:"lìkè",english:"Immediately",exampleChinese:"请立刻来！",examplePinyin:"Qǐng lìkè lái!",exampleEnglish:"Please come immediately!",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-74",chinese:"马上",pinyin:"mǎshàng",english:"Right away",exampleChinese:"我马上就来。",examplePinyin:"Wǒ mǎshàng jiù lái.",exampleEnglish:"I'll be right there.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-75",chinese:"准时",pinyin:"zhǔnshí",english:"On time / Punctual",exampleChinese:"请准时到达。",examplePinyin:"Qǐng zhǔnshí dàodá.",exampleEnglish:"Please arrive on time.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-76",chinese:"迟到",pinyin:"chídào",english:"Late / To be late",exampleChinese:"对不起，我迟到了。",examplePinyin:"Duìbuqǐ, wǒ chídào le.",exampleEnglish:"Sorry, I'm late.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-77",chinese:"早到",pinyin:"zǎo dào",english:"Arrive early",exampleChinese:"他总是早到。",examplePinyin:"Tā zǒngshì zǎo dào.",exampleEnglish:"He always arrives early.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-78",chinese:"频繁",pinyin:"pínfán",english:"Frequent",exampleChinese:"他们频繁见面。",examplePinyin:"Tāmen pínfán jiànmiàn.",exampleEnglish:"They meet frequently.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-79",chinese:"偶尔",pinyin:"ǒu'ěr",english:"Occasionally",exampleChinese:"我偶尔吃快餐。",examplePinyin:"Wǒ ǒu'ěr chī kuàicān.",exampleEnglish:"I occasionally eat fast food.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-80",chinese:"总是",pinyin:"zǒngshì",english:"Always",exampleChinese:"他总是很忙。",examplePinyin:"Tā zǒngshì hěn máng.",exampleEnglish:"He's always busy.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-81",chinese:"很少",pinyin:"hěn shǎo",english:"Rarely / Seldom",exampleChinese:"我很少看电视。",examplePinyin:"Wǒ hěn shǎo kàn diànshì.",exampleEnglish:"I rarely watch TV.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-82",chinese:"有时候",pinyin:"yǒu shíhou",english:"Sometimes",exampleChinese:"有时候我会想家。",examplePinyin:"Yǒu shíhou wǒ huì xiǎng jiā.",exampleEnglish:"Sometimes I miss home.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-83",chinese:"世纪",pinyin:"shìjì",english:"Century",exampleChinese:"二十一世纪。",examplePinyin:"Èrshíyī shìjì.",exampleEnglish:"The 21st century.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-84",chinese:"时代",pinyin:"shídài",english:"Era / Times",exampleChinese:"这是新时代。",examplePinyin:"Zhè shì xīn shídài.",exampleEnglish:"This is a new era.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-85",chinese:"季度",pinyin:"jìdù",english:"Quarter (year)",exampleChinese:"第一季度业绩很好。",examplePinyin:"Dìyī jìdù yèjì hěn hǎo.",exampleEnglish:"First quarter results are good.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-86",chinese:"整",pinyin:"zhěng",english:"Whole / Exactly",exampleChinese:"整整一年。",examplePinyin:"Zhěngzhěng yī nián.",exampleEnglish:"A whole year.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-87",chinese:"大约",pinyin:"dàyuē",english:"About / Approximately",exampleChinese:"大约三点到。",examplePinyin:"Dàyuē sān diǎn dào.",exampleEnglish:"Arrive around three o'clock.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-88",chinese:"差不多",pinyin:"chàbuduō",english:"Almost / About the same",exampleChinese:"差不多了。",examplePinyin:"Chàbuduō le.",exampleEnglish:"Almost done.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-89",chinese:"刚好",pinyin:"gānghǎo",english:"Just right / Exactly",exampleChinese:"刚好十点。",examplePinyin:"Gānghǎo shí diǎn.",exampleEnglish:"Exactly ten o'clock.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-90",chinese:"左右",pinyin:"zuǒyòu",english:"Around / About",exampleChinese:"五点左右。",examplePinyin:"Wǔ diǎn zuǒyòu.",exampleEnglish:"Around five o'clock.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-91",chinese:"双",pinyin:"shuāng",english:"Pair / Double",exampleChinese:"买一双鞋。",examplePinyin:"Mǎi yī shuāng xié.",exampleEnglish:"Buy a pair of shoes.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-92",chinese:"成",pinyin:"chéng",english:"Percent (of ten)",exampleChinese:"八成是真的。",examplePinyin:"Bā chéng shì zhēn de.",exampleEnglish:"80% is true.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-93",chinese:"倍",pinyin:"bèi",english:"Times (multiplier)",exampleChinese:"三倍价钱。",examplePinyin:"Sān bèi jiàqian.",exampleEnglish:"Three times the price.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-94",chinese:"次",pinyin:"cì",english:"Time (occurrence)",exampleChinese:"第一次来中国。",examplePinyin:"Dìyī cì lái zhōngguó.",exampleEnglish:"First time coming to China.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-95",chinese:"秒",pinyin:"miǎo",english:"Second",exampleChinese:"等我三十秒。",examplePinyin:"Děng wǒ sānshí miǎo.",exampleEnglish:"Wait thirty seconds for me.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-96",chinese:"整天",pinyin:"zhěngtiān",english:"All day",exampleChinese:"他整天都在工作。",examplePinyin:"Tā zhěngtiān dōu zài gōngzuò.",exampleEnglish:"He works all day.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-97",chinese:"整夜",pinyin:"zhěngyè",english:"All night",exampleChinese:"我整夜没睡。",examplePinyin:"Wǒ zhěngyè méi shuì.",exampleEnglish:"I didn't sleep all night.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-98",chinese:"平时",pinyin:"píngshí",english:"Usually / Normally",exampleChinese:"平时你几点起床？",examplePinyin:"Píngshí nǐ jǐ diǎn qǐchuáng?",exampleEnglish:"What time do you usually get up?",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-99",chinese:"此刻",pinyin:"cǐkè",english:"This moment",exampleChinese:"此刻我很开心。",examplePinyin:"Cǐkè wǒ hěn kāixīn.",exampleEnglish:"I'm very happy at this moment.",category:"numbersTime",status:"not_seen"},
+  {id:"numbers-100",chinese:"将来",pinyin:"jiānglái",english:"Future",exampleChinese:"将来我要当医生。",examplePinyin:"Jiānglái wǒ yào dāng yīshēng.",exampleEnglish:"I want to be a doctor in the future.",category:"numbersTime",status:"not_seen"}
 ];
