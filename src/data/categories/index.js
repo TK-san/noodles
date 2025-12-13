@@ -9,6 +9,7 @@ export { thingsData } from './things';
 export { golfData } from './golf';
 export { foodDrinksData } from './foodDrinks';
 export { travelData } from './travel';
+export { marketData } from './market';
 
 // Category metadata for UI
 export const categories = [
@@ -91,6 +92,14 @@ export const categories = [
     icon: '✈️',
     description: 'Travel and transportation',
     getData: () => import('./travel').then(m => m.travelData)
+  },
+  {
+    id: 'market',
+    name: 'Market & Shopping',
+    nameZh: '市场购物',
+    icon: '🛒',
+    description: 'Shopping, bargaining, and commerce',
+    getData: () => import('./market').then(m => m.marketData)
   }
 ];
 
