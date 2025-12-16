@@ -4,13 +4,12 @@ import {
   Heading,
   Box,
   Text,
-  Button,
   SimpleGrid,
   Badge,
   HStack,
   useColorModeValue
 } from '@chakra-ui/react';
-import { FiShuffle, FiRepeat, FiGrid } from 'react-icons/fi';
+import { FiShuffle, FiRepeat, FiZap } from 'react-icons/fi';
 
 /**
  * Learn screen - shown when no category is selected
@@ -19,9 +18,8 @@ import { FiShuffle, FiRepeat, FiGrid } from 'react-icons/fi';
 export const LearnScreen = ({
   onQuickQuiz,
   onReviewWeak,
-  onSelectCategory,
-  totalStats,
-  categoryProgress
+  onDailyChallenge,
+  totalStats
 }) => {
   // Color mode values
   const headingColor = useColorModeValue('gray.800', 'white');
@@ -126,7 +124,7 @@ export const LearnScreen = ({
             </HStack>
           </Box>
 
-          {/* Browse Categories */}
+          {/* Daily Challenge */}
           <Box
             bg={cardBg}
             p={6}
@@ -135,7 +133,7 @@ export const LearnScreen = ({
             border="1px solid"
             borderColor={borderColor}
             cursor="pointer"
-            onClick={onSelectCategory}
+            onClick={onDailyChallenge}
             _hover={{ transform: 'translateY(-2px)', boxShadow: 'lg' }}
             transition="all 0.2s"
           >
@@ -146,19 +144,19 @@ export const LearnScreen = ({
                 borderRadius="lg"
                 color="white"
               >
-                <FiGrid size={24} />
+                <FiZap size={24} />
               </Box>
               <VStack align="start" spacing={1} flex={1}>
                 <HStack>
                   <Text fontWeight="bold" fontSize="lg" color={headingColor}>
-                    Browse Topics
+                    Daily Challenge
                   </Text>
                   <Badge colorScheme="green" fontSize="xs">
-                    {totalStats?.total || 0} words
+                    20 words
                   </Badge>
                 </HStack>
                 <Text fontSize="sm" color={subtextColor}>
-                  Study by category
+                  Timed quiz to test your skills
                 </Text>
               </VStack>
             </HStack>

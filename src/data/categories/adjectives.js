@@ -106,5 +106,26 @@ export const adjectivesData = [
   {id:"adj-97",chinese:"浅",pinyin:"qiǎn",english:"Shallow",exampleChinese:"这里水很浅。",examplePinyin:"Zhèlǐ shuǐ hěn qiǎn.",exampleEnglish:"The water is shallow here.",category:"adjectives",status:"not_seen"},
   {id:"adj-98",chinese:"厚",pinyin:"hòu",english:"Thick",exampleChinese:"这本书很厚。",examplePinyin:"Zhè běn shū hěn hòu.",exampleEnglish:"This book is thick.",category:"adjectives",status:"not_seen"},
   {id:"adj-99",chinese:"薄",pinyin:"báo",english:"Thin",exampleChinese:"纸很薄。",examplePinyin:"Zhǐ hěn báo.",exampleEnglish:"The paper is thin.",category:"adjectives",status:"not_seen"},
-  {id:"adj-100",chinese:"软",pinyin:"ruǎn",english:"Soft",exampleChinese:"床很软。",examplePinyin:"Chuáng hěn ruǎn.",exampleEnglish:"The bed is soft.",category:"adjectives",status:"not_seen"}
+  {id:"adj-100",chinese:"软",pinyin:"ruǎn",english:"Soft",exampleChinese:"床很软。",examplePinyin:"Chuáng hěn ruǎn.",exampleEnglish:"The bed is soft.",category:"adjectives",status:"not_seen"},
+  // Medium difficulty - Additional adjectives (101-120)
+  {id:"adj-101",chinese:"硬",pinyin:"yìng",english:"Hard / Rigid",exampleChinese:"这块石头很硬。",examplePinyin:"Zhè kuài shítou hěn yìng.",exampleEnglish:"This rock is very hard.",category:"adjectives",status:"not_seen"},
+  {id:"adj-102",chinese:"尖锐",pinyin:"jiānruì",english:"Sharp / Pointed",exampleChinese:"他提出了尖锐的问题。",examplePinyin:"Tā tíchū le jiānruì de wèntí.",exampleEnglish:"He raised a sharp question.",category:"adjectives",status:"not_seen"},
+  {id:"adj-103",chinese:"钝",pinyin:"dùn",english:"Blunt / Dull",exampleChinese:"这把刀很钝了。",examplePinyin:"Zhè bǎ dāo hěn dùn le.",exampleEnglish:"This knife is very dull.",category:"adjectives",status:"not_seen"},
+  {id:"adj-104",chinese:"湿润",pinyin:"shīrùn",english:"Moist / Humid",exampleChinese:"今天空气很湿润。",examplePinyin:"Jīntiān kōngqì hěn shīrùn.",exampleEnglish:"The air is very humid today.",category:"adjectives",status:"not_seen"},
+  {id:"adj-105",chinese:"干燥",pinyin:"gānzào",english:"Dry / Arid",exampleChinese:"冬天皮肤很干燥。",examplePinyin:"Dōngtiān pífū hěn gānzào.",exampleEnglish:"Skin is very dry in winter.",category:"adjectives",status:"not_seen"},
+  {id:"adj-106",chinese:"光滑",pinyin:"guānghuá",english:"Smooth / Slippery",exampleChinese:"地板很光滑，小心滑倒。",examplePinyin:"Dìbǎn hěn guānghuá, xiǎoxīn huádǎo.",exampleEnglish:"The floor is slippery, be careful.",category:"adjectives",status:"not_seen"},
+  {id:"adj-107",chinese:"粗糙",pinyin:"cūcāo",english:"Rough / Coarse",exampleChinese:"这块布料很粗糙。",examplePinyin:"Zhè kuài bùliào hěn cūcāo.",exampleEnglish:"This fabric is very rough.",category:"adjectives",status:"not_seen"},
+  {id:"adj-108",chinese:"透明",pinyin:"tòumíng",english:"Transparent",exampleChinese:"玻璃是透明的。",examplePinyin:"Bōli shì tòumíng de.",exampleEnglish:"Glass is transparent.",category:"adjectives",status:"not_seen"},
+  {id:"adj-109",chinese:"模糊不清",pinyin:"móhu bùqīng",english:"Unclear / Vague",exampleChinese:"他的回答模糊不清。",examplePinyin:"Tā de huídá móhu bùqīng.",exampleEnglish:"His answer was unclear.",category:"adjectives",status:"not_seen"},
+  {id:"adj-110",chinese:"灵活",pinyin:"línghuó",english:"Flexible / Agile",exampleChinese:"她的思维很灵活。",examplePinyin:"Tā de sīwéi hěn línghuó.",exampleEnglish:"Her thinking is very flexible.",category:"adjectives",status:"not_seen"},
+  {id:"adj-111",chinese:"固执",pinyin:"gùzhí",english:"Stubborn",exampleChinese:"他太固执了。",examplePinyin:"Tā tài gùzhí le.",exampleEnglish:"He is too stubborn.",category:"adjectives",status:"not_seen"},
+  {id:"adj-112",chinese:"温柔",pinyin:"wēnróu",english:"Gentle / Tender",exampleChinese:"她说话很温柔。",examplePinyin:"Tā shuōhuà hěn wēnróu.",exampleEnglish:"She speaks very gently.",category:"adjectives",status:"not_seen"},
+  {id:"adj-113",chinese:"暴躁",pinyin:"bàozào",english:"Short-tempered / Irritable",exampleChinese:"他的脾气很暴躁。",examplePinyin:"Tā de píqi hěn bàozào.",exampleEnglish:"He has a very short temper.",category:"adjectives",status:"not_seen"},
+  {id:"adj-114",chinese:"大方",pinyin:"dàfang",english:"Generous / Gracious",exampleChinese:"他很大方，总是请客。",examplePinyin:"Tā hěn dàfang, zǒngshì qǐngkè.",exampleEnglish:"He is generous, always treating others.",category:"adjectives",status:"not_seen"},
+  {id:"adj-115",chinese:"小气",pinyin:"xiǎoqi",english:"Stingy / Petty",exampleChinese:"别那么小气嘛。",examplePinyin:"Bié nàme xiǎoqi ma.",exampleEnglish:"Don't be so stingy.",category:"adjectives",status:"not_seen"},
+  {id:"adj-116",chinese:"真诚",pinyin:"zhēnchéng",english:"Sincere / Genuine",exampleChinese:"他的道歉很真诚。",examplePinyin:"Tā de dàoqiàn hěn zhēnchéng.",exampleEnglish:"His apology was very sincere.",category:"adjectives",status:"not_seen"},
+  {id:"adj-117",chinese:"虚伪",pinyin:"xūwěi",english:"Hypocritical / Fake",exampleChinese:"他的笑容很虚伪。",examplePinyin:"Tā de xiàoróng hěn xūwěi.",exampleEnglish:"His smile is very fake.",category:"adjectives",status:"not_seen"},
+  {id:"adj-118",chinese:"积极",pinyin:"jījí",english:"Active / Positive",exampleChinese:"他工作很积极。",examplePinyin:"Tā gōngzuò hěn jījí.",exampleEnglish:"He is very active at work.",category:"adjectives",status:"not_seen"},
+  {id:"adj-119",chinese:"消极",pinyin:"xiāojí",english:"Negative / Passive",exampleChinese:"不要这么消极。",examplePinyin:"Bùyào zhème xiāojí.",exampleEnglish:"Don't be so negative.",category:"adjectives",status:"not_seen"},
+  {id:"adj-120",chinese:"乐观",pinyin:"lèguān",english:"Optimistic",exampleChinese:"她对未来很乐观。",examplePinyin:"Tā duì wèilái hěn lèguān.",exampleEnglish:"She is optimistic about the future.",category:"adjectives",status:"not_seen"}
 ];

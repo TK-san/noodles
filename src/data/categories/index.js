@@ -10,6 +10,7 @@ export { golfData } from './golf';
 export { foodDrinksData } from './foodDrinks';
 export { travelData } from './travel';
 export { marketData } from './market';
+export { dailyActivitiesData } from './dailyActivities';
 
 // Category metadata for UI
 export const categories = [
@@ -100,6 +101,14 @@ export const categories = [
     icon: '🛒',
     description: 'Shopping, bargaining, and commerce',
     getData: () => import('./market').then(m => m.marketData)
+  },
+  {
+    id: 'dailyActivities',
+    name: 'Daily Activities',
+    nameZh: '日常活动',
+    icon: '📅',
+    description: 'Everyday routines and activities',
+    getData: () => import('./dailyActivities').then(m => m.dailyActivitiesData)
   }
 ];
 

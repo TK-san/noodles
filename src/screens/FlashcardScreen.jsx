@@ -9,7 +9,7 @@ import {
   Box,
   useColorModeValue
 } from '@chakra-ui/react';
-import { FiChevronLeft, FiChevronRight, FiCheck, FiX } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiCheck, FiRefreshCw } from 'react-icons/fi';
 import { useState, useCallback } from 'react';
 import { Flashcard } from '../components/Flashcard';
 import { ProgressBar } from '../components/ProgressBar';
@@ -178,7 +178,7 @@ export const FlashcardScreen = ({ words, stats, onUpdateStatus, categoryName, ca
         {/* Quick action buttons - compact */}
         <HStack spacing={3} w="100%">
           <Button
-            leftIcon={<FiX size={16} />}
+            leftIcon={<FiRefreshCw size={16} />}
             flex={1}
             variant="outline"
             colorScheme="gray"

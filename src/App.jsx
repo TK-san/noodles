@@ -15,7 +15,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categoryWords, setCategoryWords] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [studyMode, setStudyMode] = useState(null); // 'quick-quiz', 'review-weak', or null
+  const [studyMode, setStudyMode] = useState(null); // 'quick-quiz', 'review-weak', 'daily-challenge', or null
 
   const categoryProgress = useCategoryProgress(categories);
   const { words, updateWordStatus, stats, resetProgress } = useProgress(
@@ -59,16 +59,26 @@ function App() {
       // Shuffle and pick 10 random words
       const shuffled = [...allWords].sort(() => Math.random() - 0.5);
       return shuffled.slice(0, 10);
+    } else if (mode === 'daily-challenge') {
+      // Shuffle and pick 20 random words for daily challenge
+      const shuffled = [...allWords].sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, 20);
     } else if (mode === 'review-weak') {
       // Get words that are in "learning" status from localStorage
       const weakWords = allWords.filter(word => {
         // Check each category's progress for this word
         for (const cat of categories) {
-          const stored = localStorage.getItem(`noodles-progress-${cat.id}`);
+          const stored = localStorage.getItem(`noodles_progress_${cat.id}`);
           if (stored) {
-            const progress = JSON.parse(stored);
-            if (progress[word.id] === 'learning') {
-              return true;
+            try {
+              const progressArray = JSON.parse(stored);
+              // Progress is stored as an array of word objects
+              const wordProgress = progressArray.find(w => w.id === word.id);
+              if (wordProgress && wordProgress.status === 'learning') {
+                return true;
+              }
+            } catch (e) {
+              console.error('Failed to parse progress for', cat.id);
             }
           }
         }
@@ -109,6 +119,12 @@ function App() {
   const handleReviewWeak = () => {
     setSelectedCategory(null);
     setStudyMode('review-weak');
+    setCurrentScreen('flashcard');
+  };
+
+  const handleDailyChallenge = () => {
+    setSelectedCategory(null);
+    setStudyMode('daily-challenge');
     setCurrentScreen('flashcard');
   };
 
@@ -161,8 +177,8 @@ function App() {
           words={words}
           stats={stats}
           onUpdateStatus={updateWordStatus}
-          categoryName={studyMode === 'quick-quiz' ? 'Quick Quiz' : studyMode === 'review-weak' ? 'Review Weak Words' : currentCategory?.name}
-          categoryIcon={studyMode === 'quick-quiz' ? '🎲' : studyMode === 'review-weak' ? '🔄' : currentCategory?.icon}
+          categoryName={studyMode === 'quick-quiz' ? 'Quick Quiz' : studyMode === 'review-weak' ? 'Review Weak Words' : studyMode === 'daily-challenge' ? 'Daily Challenge' : currentCategory?.name}
+          categoryIcon={studyMode === 'quick-quiz' ? '🎲' : studyMode === 'review-weak' ? '🔄' : studyMode === 'daily-challenge' ? '⚡' : currentCategory?.icon}
           onBackToCategories={handleBackToLearn}
         />
       )}
@@ -171,9 +187,8 @@ function App() {
         <LearnScreen
           onQuickQuiz={handleQuickQuiz}
           onReviewWeak={handleReviewWeak}
-          onSelectCategory={handleBackToCategories}
+          onDailyChallenge={handleDailyChallenge}
           totalStats={totalStats}
-          categoryProgress={categoryProgress}
         />
       )}
 

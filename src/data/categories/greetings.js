@@ -1099,5 +1099,226 @@ export const greetingsData = [
     exampleEnglish: "Help yourself, treat this place as your own home.",
     category: "greetings",
     status: "not_seen"
+  },
+  // Medium difficulty - Additional expressions (101-120)
+  {
+    id: "greetings-101",
+    chinese: "恭敬不如从命",
+    pinyin: "gōngjìng bùrú cóngmìng",
+    english: "I'll respectfully comply",
+    exampleChinese: "恭敬不如从命，我接受您的好意。",
+    examplePinyin: "Gōngjìng bùrú cóngmìng, wǒ jiēshòu nín de hǎoyì.",
+    exampleEnglish: "I'll respectfully comply and accept your kindness.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-102",
+    chinese: "荣幸之至",
+    pinyin: "róngxìng zhī zhì",
+    english: "It's my greatest honor",
+    exampleChinese: "能与您合作，荣幸之至。",
+    examplePinyin: "Néng yǔ nín hézuò, róngxìng zhī zhì.",
+    exampleEnglish: "It's my greatest honor to work with you.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-103",
+    chinese: "不胜感激",
+    pinyin: "bùshèng gǎnjī",
+    english: "Extremely grateful",
+    exampleChinese: "您的帮助让我不胜感激。",
+    examplePinyin: "Nín de bāngzhù ràng wǒ bùshèng gǎnjī.",
+    exampleEnglish: "Your help makes me extremely grateful.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-104",
+    chinese: "久闻大名",
+    pinyin: "jiǔwén dàmíng",
+    english: "I've long heard of your great name",
+    exampleChinese: "久闻大名，今日得见，三生有幸。",
+    examplePinyin: "Jiǔwén dàmíng, jīnrì déjiàn, sānshēng yǒuxìng.",
+    exampleEnglish: "I've long heard of you, meeting you today is a great fortune.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-105",
+    chinese: "承蒙厚爱",
+    pinyin: "chéngméng hòu'ài",
+    english: "Thank you for your generous love",
+    exampleChinese: "承蒙厚爱，我会继续努力。",
+    examplePinyin: "Chéngméng hòu'ài, wǒ huì jìxù nǔlì.",
+    exampleEnglish: "Thank you for your generous love, I will continue to work hard.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-106",
+    chinese: "万分感谢",
+    pinyin: "wànfēn gǎnxiè",
+    english: "Thank you immensely",
+    exampleChinese: "万分感谢您的支持！",
+    examplePinyin: "Wànfēn gǎnxiè nín de zhīchí!",
+    exampleEnglish: "Thank you immensely for your support!",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-107",
+    chinese: "不敢当",
+    pinyin: "bùgǎndāng",
+    english: "I don't deserve it (humble)",
+    exampleChinese: "您过奖了，不敢当。",
+    examplePinyin: "Nín guòjiǎng le, bùgǎndāng.",
+    exampleEnglish: "You flatter me, I don't deserve it.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-108",
+    chinese: "有缘再见",
+    pinyin: "yǒuyuán zàijiàn",
+    english: "Until fate brings us together again",
+    exampleChinese: "有缘再见，珍重！",
+    examplePinyin: "Yǒuyuán zàijiàn, zhēnzhòng!",
+    exampleEnglish: "Until fate brings us together again, take care!",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-109",
+    chinese: "心领了",
+    pinyin: "xīnlǐng le",
+    english: "I appreciate the thought",
+    exampleChinese: "您的好意我心领了。",
+    examplePinyin: "Nín de hǎoyì wǒ xīnlǐng le.",
+    exampleEnglish: "I appreciate your kind thought.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-110",
+    chinese: "受宠若惊",
+    pinyin: "shòuchǒng ruòjīng",
+    english: "Feel extremely flattered",
+    exampleChinese: "收到您的邀请，我受宠若惊。",
+    examplePinyin: "Shōudào nín de yāoqǐng, wǒ shòuchǒng ruòjīng.",
+    exampleEnglish: "Receiving your invitation, I feel extremely flattered.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-111",
+    chinese: "不敢高攀",
+    pinyin: "bùgǎn gāopān",
+    english: "I dare not aspire so high",
+    exampleChinese: "您太客气了，我不敢高攀。",
+    examplePinyin: "Nín tài kèqi le, wǒ bùgǎn gāopān.",
+    exampleEnglish: "You're too kind, I dare not aspire so high.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-112",
+    chinese: "承让",
+    pinyin: "chéngràng",
+    english: "I accept your concession (humble win)",
+    exampleChinese: "承让承让，这次运气好。",
+    examplePinyin: "Chéngràng chéngràng, zhè cì yùnqi hǎo.",
+    exampleEnglish: "I accept your concession, I was just lucky this time.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-113",
+    chinese: "承情",
+    pinyin: "chéngqíng",
+    english: "To accept a favor with gratitude",
+    exampleChinese: "承情承情，改天请您吃饭。",
+    examplePinyin: "Chéngqíng chéngqíng, gǎitiān qǐng nín chīfàn.",
+    exampleEnglish: "I gratefully accept, I'll treat you to dinner another day.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-114",
+    chinese: "惭愧",
+    pinyin: "cánkuì",
+    english: "I'm ashamed (humble response)",
+    exampleChinese: "惭愧惭愧，还有很多要学习。",
+    examplePinyin: "Cánkuì cánkuì, hái yǒu hěn duō yào xuéxí.",
+    exampleEnglish: "I'm ashamed, there's still much to learn.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-115",
+    chinese: "言重了",
+    pinyin: "yánzhòng le",
+    english: "You're too serious / You exaggerate",
+    exampleChinese: "您言重了，这是我应该做的。",
+    examplePinyin: "Nín yánzhòng le, zhè shì wǒ yīnggāi zuò de.",
+    exampleEnglish: "You're too serious, this is what I should do.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-116",
+    chinese: "愿闻其详",
+    pinyin: "yuàn wén qí xiáng",
+    english: "I'd like to hear the details",
+    exampleChinese: "愿闻其详，请您详细说说。",
+    examplePinyin: "Yuàn wén qí xiáng, qǐng nín xiángxì shuōshuō.",
+    exampleEnglish: "I'd like to hear the details, please elaborate.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-117",
+    chinese: "见笑了",
+    pinyin: "jiànxiào le",
+    english: "Please don't laugh at me",
+    exampleChinese: "献丑了，让您见笑了。",
+    examplePinyin: "Xiànchǒu le, ràng nín jiànxiào le.",
+    exampleEnglish: "I made a fool of myself, please don't laugh.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-118",
+    chinese: "请多包涵",
+    pinyin: "qǐng duō bāohán",
+    english: "Please be tolerant with me",
+    exampleChinese: "如有不周，请多包涵。",
+    examplePinyin: "Rú yǒu bù zhōu, qǐng duō bāohán.",
+    exampleEnglish: "If there are any shortcomings, please be tolerant.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-119",
+    chinese: "打搅了",
+    pinyin: "dǎjiǎo le",
+    english: "Sorry for disturbing you",
+    exampleChinese: "打搅了，我先走了。",
+    examplePinyin: "Dǎjiǎo le, wǒ xiān zǒu le.",
+    exampleEnglish: "Sorry for disturbing you, I'll leave now.",
+    category: "greetings",
+    status: "not_seen"
+  },
+  {
+    id: "greetings-120",
+    chinese: "叨扰了",
+    pinyin: "dāorǎo le",
+    english: "Sorry to have bothered you (formal)",
+    exampleChinese: "叨扰了，感谢您的款待。",
+    examplePinyin: "Dāorǎo le, gǎnxiè nín de kuǎndài.",
+    exampleEnglish: "Sorry to have bothered you, thank you for your hospitality.",
+    category: "greetings",
+    status: "not_seen"
   }
 ];

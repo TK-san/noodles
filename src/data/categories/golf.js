@@ -1099,5 +1099,226 @@ export const golfData = [
     exampleEnglish: "My coach is very professional.",
     category: "golf",
     status: "not_seen"
+  },
+  // Medium difficulty - Additional golf terms (101-120)
+  {
+    id: "golf-101",
+    chinese: "挥杆分析",
+    pinyin: "huīgān fēnxī",
+    english: "Swing analysis",
+    exampleChinese: "我需要做一次挥杆分析。",
+    examplePinyin: "Wǒ xūyào zuò yī cì huīgān fēnxī.",
+    exampleEnglish: "I need a swing analysis.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-102",
+    chinese: "球道策略",
+    pinyin: "qiúdào cèlüè",
+    english: "Course strategy",
+    exampleChinese: "好的球道策略很重要。",
+    examplePinyin: "Hǎo de qiúdào cèlüè hěn zhòngyào.",
+    exampleEnglish: "Good course strategy is important.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-103",
+    chinese: "球场管理",
+    pinyin: "qiúchǎng guǎnlǐ",
+    english: "Course management",
+    exampleChinese: "球场管理是低差点球手的关键。",
+    examplePinyin: "Qiúchǎng guǎnlǐ shì dī chādiǎn qiúshǒu de guānjiàn.",
+    exampleEnglish: "Course management is key for low handicappers.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-104",
+    chinese: "职业选手",
+    pinyin: "zhíyè xuǎnshǒu",
+    english: "Professional player",
+    exampleChinese: "他是一名职业选手。",
+    examplePinyin: "Tā shì yī míng zhíyè xuǎnshǒu.",
+    exampleEnglish: "He is a professional player.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-105",
+    chinese: "业余选手",
+    pinyin: "yèyú xuǎnshǒu",
+    english: "Amateur player",
+    exampleChinese: "我只是一个业余选手。",
+    examplePinyin: "Wǒ zhǐshì yī gè yèyú xuǎnshǒu.",
+    exampleEnglish: "I'm just an amateur player.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-106",
+    chinese: "资格赛",
+    pinyin: "zīgé sài",
+    english: "Qualifying round",
+    exampleChinese: "他通过了资格赛。",
+    examplePinyin: "Tā tōngguò le zīgé sài.",
+    exampleEnglish: "He passed the qualifying round.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-107",
+    chinese: "奖金",
+    pinyin: "jiǎngjīn",
+    english: "Prize money",
+    exampleChinese: "这场比赛的奖金很高。",
+    examplePinyin: "Zhè chǎng bǐsài de jiǎngjīn hěn gāo.",
+    exampleEnglish: "The prize money for this tournament is high.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-108",
+    chinese: "世界排名",
+    pinyin: "shìjiè páimíng",
+    english: "World ranking",
+    exampleChinese: "他的世界排名上升了。",
+    examplePinyin: "Tā de shìjiè páimíng shàngshēng le.",
+    exampleEnglish: "His world ranking has risen.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-109",
+    chinese: "握杆方式",
+    pinyin: "wò gān fāngshì",
+    english: "Grip style",
+    exampleChinese: "握杆方式很重要。",
+    examplePinyin: "Wò gān fāngshì hěn zhòngyào.",
+    exampleEnglish: "Grip style is very important.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-110",
+    chinese: "站姿",
+    pinyin: "zhànzī",
+    english: "Stance / Posture",
+    exampleChinese: "你的站姿需要调整。",
+    examplePinyin: "Nǐ de zhànzī xūyào tiáozhěng.",
+    exampleEnglish: "Your stance needs adjustment.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-111",
+    chinese: "上杆",
+    pinyin: "shàng gān",
+    english: "Backswing",
+    exampleChinese: "上杆要慢一点。",
+    examplePinyin: "Shàng gān yào màn yīdiǎn.",
+    exampleEnglish: "The backswing should be slower.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-112",
+    chinese: "下杆",
+    pinyin: "xià gān",
+    english: "Downswing",
+    exampleChinese: "下杆的时候要保持节奏。",
+    examplePinyin: "Xià gān de shíhou yào bǎochí jiézòu.",
+    exampleEnglish: "Keep the rhythm during the downswing.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-113",
+    chinese: "触球点",
+    pinyin: "chù qiú diǎn",
+    english: "Impact point",
+    exampleChinese: "触球点要准确。",
+    examplePinyin: "Chù qiú diǎn yào zhǔnquè.",
+    exampleEnglish: "The impact point should be accurate.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-114",
+    chinese: "送杆",
+    pinyin: "sòng gān",
+    english: "Follow-through",
+    exampleChinese: "送杆要完整。",
+    examplePinyin: "Sòng gān yào wánzhěng.",
+    exampleEnglish: "The follow-through should be complete.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-115",
+    chinese: "球位",
+    pinyin: "qiú wèi",
+    english: "Ball position",
+    exampleChinese: "检查一下你的球位。",
+    examplePinyin: "Jiǎnchá yīxià nǐ de qiú wèi.",
+    exampleEnglish: "Check your ball position.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-116",
+    chinese: "瞄准线",
+    pinyin: "miáozhǔn xiàn",
+    english: "Alignment line",
+    exampleChinese: "确保瞄准线正确。",
+    examplePinyin: "Quèbǎo miáozhǔn xiàn zhèngquè.",
+    exampleEnglish: "Make sure the alignment line is correct.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-117",
+    chinese: "球速",
+    pinyin: "qiú sù",
+    english: "Ball speed",
+    exampleChinese: "你的球速很快。",
+    examplePinyin: "Nǐ de qiú sù hěn kuài.",
+    exampleEnglish: "Your ball speed is fast.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-118",
+    chinese: "起飞角度",
+    pinyin: "qǐfēi jiǎodù",
+    english: "Launch angle",
+    exampleChinese: "起飞角度影响距离。",
+    examplePinyin: "Qǐfēi jiǎodù yǐngxiǎng jùlí.",
+    exampleEnglish: "Launch angle affects distance.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-119",
+    chinese: "倒旋",
+    pinyin: "dào xuán",
+    english: "Backspin",
+    exampleChinese: "这一杆有很多倒旋。",
+    examplePinyin: "Zhè yī gān yǒu hěn duō dào xuán.",
+    exampleEnglish: "This shot has a lot of backspin.",
+    category: "golf",
+    status: "not_seen"
+  },
+  {
+    id: "golf-120",
+    chinese: "侧旋",
+    pinyin: "cè xuán",
+    english: "Sidespin",
+    exampleChinese: "侧旋会让球弯曲。",
+    examplePinyin: "Cè xuán huì ràng qiú wānqū.",
+    exampleEnglish: "Sidespin will curve the ball.",
+    category: "golf",
+    status: "not_seen"
   }
 ];
