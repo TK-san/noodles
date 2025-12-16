@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChakraProvider, Spinner, Center } from '@chakra-ui/react';
 import { HomeScreen } from './screens/HomeScreen';
 import { CategoryScreen } from './screens/CategoryScreen';
+import { CategoryLandingScreen } from './screens/CategoryLandingScreen';
 import { FlashcardScreen } from './screens/FlashcardScreen';
 import { ProgressScreen } from './screens/ProgressScreen';
 import { LearnScreen } from './screens/LearnScreen';
@@ -16,6 +17,7 @@ function App() {
   const [categoryWords, setCategoryWords] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [studyMode, setStudyMode] = useState(null); // 'quick-quiz', 'review-weak', 'daily-challenge', or null
+  const [filterMode, setFilterMode] = useState(null); // 'all', 'learning', 'mastered' - for category study
 
   const categoryProgress = useCategoryProgress(categories);
   const { words, updateWordStatus, stats, resetProgress } = useProgress(
@@ -100,7 +102,29 @@ function App() {
 
   const handleSelectCategory = (categoryId) => {
     setSelectedCategory(categoryId);
+    setFilterMode(null);
+    setCurrentScreen('category-landing');
+  };
+
+  // Category landing screen handlers
+  const handleStudyAll = () => {
+    setFilterMode('all');
     setCurrentScreen('flashcard');
+  };
+
+  const handleStudyLearning = () => {
+    setFilterMode('learning');
+    setCurrentScreen('flashcard');
+  };
+
+  const handleStudyMastered = () => {
+    setFilterMode('mastered');
+    setCurrentScreen('flashcard');
+  };
+
+  const handleBackToCategoryLanding = () => {
+    setFilterMode(null);
+    setCurrentScreen('category-landing');
   };
 
   const handleBackToCategories = () => {
@@ -151,6 +175,16 @@ function App() {
     ? categories.find(c => c.id === selectedCategory)
     : null;
 
+  // Filter words based on filterMode for category study
+  const filteredWords = filterMode && selectedCategory
+    ? words.filter(word => {
+        if (filterMode === 'all') return true;
+        if (filterMode === 'learning') return word.status === 'learning';
+        if (filterMode === 'mastered') return word.status === 'mastered';
+        return true;
+      })
+    : words;
+
   return (
     <ChakraProvider theme={theme}>
       {/* Loading spinner */}
@@ -172,18 +206,29 @@ function App() {
         />
       )}
 
-      {!isLoading && currentScreen === 'flashcard' && words.length > 0 && (
-        <FlashcardScreen
-          words={words}
+      {!isLoading && currentScreen === 'category-landing' && currentCategory && (
+        <CategoryLandingScreen
+          category={currentCategory}
           stats={stats}
-          onUpdateStatus={updateWordStatus}
-          categoryName={studyMode === 'quick-quiz' ? 'Quick Quiz' : studyMode === 'review-weak' ? 'Review Weak Words' : studyMode === 'daily-challenge' ? 'Daily Challenge' : currentCategory?.name}
-          categoryIcon={studyMode === 'quick-quiz' ? '🎲' : studyMode === 'review-weak' ? '🔄' : studyMode === 'daily-challenge' ? '⚡' : currentCategory?.icon}
-          onBackToCategories={handleBackToLearn}
+          onStudyAll={handleStudyAll}
+          onStudyLearning={handleStudyLearning}
+          onStudyMastered={handleStudyMastered}
+          onBack={handleBackToCategories}
         />
       )}
 
-      {!isLoading && currentScreen === 'flashcard' && words.length === 0 && !studyMode && (
+      {!isLoading && currentScreen === 'flashcard' && filteredWords.length > 0 && (
+        <FlashcardScreen
+          words={filteredWords}
+          stats={stats}
+          onUpdateStatus={updateWordStatus}
+          categoryName={studyMode === 'quick-quiz' ? 'Quick Quiz' : studyMode === 'review-weak' ? 'Review Weak Words' : studyMode === 'daily-challenge' ? 'Daily Challenge' : filterMode === 'learning' ? `${currentCategory?.name} (Learning)` : filterMode === 'mastered' ? `${currentCategory?.name} (Mastered)` : currentCategory?.name}
+          categoryIcon={studyMode === 'quick-quiz' ? '🎲' : studyMode === 'review-weak' ? '🔄' : studyMode === 'daily-challenge' ? '⚡' : currentCategory?.icon}
+          onBackToCategories={selectedCategory ? handleBackToCategoryLanding : handleBackToLearn}
+        />
+      )}
+
+      {!isLoading && currentScreen === 'flashcard' && filteredWords.length === 0 && !studyMode && !selectedCategory && (
         <LearnScreen
           onQuickQuiz={handleQuickQuiz}
           onReviewWeak={handleReviewWeak}
@@ -192,13 +237,25 @@ function App() {
         />
       )}
 
-      {!isLoading && currentScreen === 'flashcard' && words.length === 0 && studyMode === 'review-weak' && (
+      {!isLoading && currentScreen === 'flashcard' && filteredWords.length === 0 && studyMode === 'review-weak' && (
         <LearnScreen
           onQuickQuiz={handleQuickQuiz}
           onReviewWeak={handleReviewWeak}
           onDailyChallenge={handleDailyChallenge}
           totalStats={totalStats}
           emptyMessage="No weak words to review! Mark words as 'Learning' while studying to see them here."
+        />
+      )}
+
+      {!isLoading && currentScreen === 'flashcard' && filteredWords.length === 0 && selectedCategory && filterMode && (
+        <CategoryLandingScreen
+          category={currentCategory}
+          stats={stats}
+          onStudyAll={handleStudyAll}
+          onStudyLearning={handleStudyLearning}
+          onStudyMastered={handleStudyMastered}
+          onBack={handleBackToCategories}
+          emptyMessage={filterMode === 'learning' ? "No words marked as 'Learning' yet. Study all words first!" : filterMode === 'mastered' ? "No words mastered yet. Keep studying!" : null}
         />
       )}
 
