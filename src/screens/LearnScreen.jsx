@@ -7,6 +7,8 @@ import {
   SimpleGrid,
   Badge,
   HStack,
+  Alert,
+  AlertIcon,
   useColorModeValue
 } from '@chakra-ui/react';
 import { FiShuffle, FiRepeat, FiZap } from 'react-icons/fi';
@@ -19,7 +21,8 @@ export const LearnScreen = ({
   onQuickQuiz,
   onReviewWeak,
   onDailyChallenge,
-  totalStats
+  totalStats,
+  emptyMessage
 }) => {
   // Color mode values
   const headingColor = useColorModeValue('gray.800', 'white');
@@ -41,6 +44,14 @@ export const LearnScreen = ({
             Choose a study mode
           </Text>
         </VStack>
+
+        {/* Empty message alert */}
+        {emptyMessage && (
+          <Alert status="info" borderRadius="lg">
+            <AlertIcon />
+            {emptyMessage}
+          </Alert>
+        )}
 
         {/* Study Mode Cards */}
         <SimpleGrid columns={1} spacing={4}>

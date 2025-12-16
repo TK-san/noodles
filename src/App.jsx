@@ -192,6 +192,16 @@ function App() {
         />
       )}
 
+      {!isLoading && currentScreen === 'flashcard' && words.length === 0 && studyMode === 'review-weak' && (
+        <LearnScreen
+          onQuickQuiz={handleQuickQuiz}
+          onReviewWeak={handleReviewWeak}
+          onDailyChallenge={handleDailyChallenge}
+          totalStats={totalStats}
+          emptyMessage="No weak words to review! Mark words as 'Learning' while studying to see them here."
+        />
+      )}
+
       {!isLoading && currentScreen === 'progress' && (
         <ProgressScreen
           stats={selectedCategory ? stats : totalStats}
