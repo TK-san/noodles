@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
-import { ChakraProvider, Spinner, Center } from '@chakra-ui/react';
+import { useState, useEffect, useCallback } from 'react';
+import { ChakraProvider, Spinner, Center, useDisclosure } from '@chakra-ui/react';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { AuthScreen } from './screens/AuthScreen';
 import { HomeScreen } from './screens/HomeScreen';
 import { CategoryScreen } from './screens/CategoryScreen';
 import { CategoryLandingScreen } from './screens/CategoryLandingScreen';
@@ -7,23 +9,57 @@ import { FlashcardScreen } from './screens/FlashcardScreen';
 import { ProgressScreen } from './screens/ProgressScreen';
 import { LearnScreen } from './screens/LearnScreen';
 import { Navigation } from './components/Navigation';
-import { useProgress, useCategoryProgress } from './hooks/useProgress';
+import { MigrationPrompt, hasLocalProgressToMigrate } from './components/MigrationPrompt';
+import { LevelUpModal } from './components/LevelUpModal';
+import { useSupabaseProgress, useSupabaseCategoryProgress } from './hooks/useSupabaseProgress';
+import { useUserLevel } from './hooks/useUserLevel';
 import { categories } from './data/categories';
 import theme from './theme/theme';
 
-function App() {
+function AppContent() {
+  const { user, loading: authLoading, isOfflineMode, setIsOfflineMode } = useAuth();
   const [currentScreen, setCurrentScreen] = useState('home');
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categoryWords, setCategoryWords] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [studyMode, setStudyMode] = useState(null); // 'quick-quiz', 'review-weak', 'daily-challenge', or null
-  const [filterMode, setFilterMode] = useState(null); // 'all', 'learning', 'mastered' - for category study
+  const [studyMode, setStudyMode] = useState(null);
+  const [filterMode, setFilterMode] = useState(null);
+  const [showAuth, setShowAuth] = useState(false);
 
-  const categoryProgress = useCategoryProgress(categories);
-  const { words, updateWordStatus, stats, resetProgress } = useProgress(
+  // Migration modal
+  const { isOpen: isMigrationOpen, onOpen: onMigrationOpen, onClose: onMigrationClose } = useDisclosure();
+
+  // Level up modal
+  const { isOpen: isLevelUpOpen, onOpen: onLevelUpOpen, onClose: onLevelUpClose } = useDisclosure();
+  const [levelUpInfo, setLevelUpInfo] = useState({ previousLevel: 1, newLevel: 1 });
+
+  // User level hook
+  const { refreshLevel, totalMastered } = useUserLevel();
+
+  const { categoryProgress } = useSupabaseCategoryProgress(categories);
+  const { words, updateWordStatus, stats, isSyncing } = useSupabaseProgress(
     categoryWords,
     selectedCategory || studyMode || 'default'
   );
+
+  // Check for migration on first auth
+  useEffect(() => {
+    if (user && !isOfflineMode) {
+      const shouldMigrate = hasLocalProgressToMigrate(user.id);
+      if (shouldMigrate) {
+        onMigrationOpen();
+      }
+    }
+  }, [user, isOfflineMode]);
+
+  // Show auth screen if not authenticated and not in offline mode
+  useEffect(() => {
+    if (!authLoading && !user && !isOfflineMode) {
+      setShowAuth(true);
+    } else {
+      setShowAuth(false);
+    }
+  }, [user, authLoading, isOfflineMode]);
 
   // Load category data when selected
   useEffect(() => {
@@ -39,7 +75,7 @@ function App() {
     }
   }, [selectedCategory]);
 
-  // Load words for study modes (quick quiz or review weak)
+  // Load words for study modes
   useEffect(() => {
     if (studyMode && !selectedCategory) {
       setIsLoading(true);
@@ -50,31 +86,24 @@ function App() {
     }
   }, [studyMode, selectedCategory]);
 
-  // Function to load words for study modes
   const loadStudyModeWords = async (mode) => {
-    // Load all words from all categories
     const allWordsPromises = categories.map(cat => cat.getData());
     const allWordsArrays = await Promise.all(allWordsPromises);
     const allWords = allWordsArrays.flat();
 
     if (mode === 'quick-quiz') {
-      // Shuffle and pick 10 random words
       const shuffled = [...allWords].sort(() => Math.random() - 0.5);
       return shuffled.slice(0, 10);
     } else if (mode === 'daily-challenge') {
-      // Shuffle and pick 20 random words for daily challenge
       const shuffled = [...allWords].sort(() => Math.random() - 0.5);
       return shuffled.slice(0, 20);
     } else if (mode === 'review-weak') {
-      // Get words that are in "learning" status from localStorage
       const weakWords = allWords.filter(word => {
-        // Check each category's progress for this word
         for (const cat of categories) {
           const stored = localStorage.getItem(`noodles_progress_${cat.id}`);
           if (stored) {
             try {
               const progressArray = JSON.parse(stored);
-              // Progress is stored as an array of word objects
               const wordProgress = progressArray.find(w => w.id === word.id);
               if (wordProgress && wordProgress.status === 'learning') {
                 return true;
@@ -86,10 +115,35 @@ function App() {
         }
         return false;
       });
-      // Shuffle weak words
       return weakWords.sort(() => Math.random() - 0.5);
     }
     return [];
+  };
+
+  // Wrap updateWordStatus to check for level ups
+  const handleUpdateWordStatus = useCallback(async (wordId, newStatus) => {
+    const previousStatus = words.find(w => w.id === wordId)?.status;
+    updateWordStatus(wordId, newStatus);
+
+    // Check for level up when mastering a word
+    if (newStatus === 'mastered' && previousStatus !== 'mastered') {
+      // Calculate new mastered count
+      const newMasteredCount = totalMastered + 1;
+      const result = await refreshLevel(newMasteredCount);
+
+      if (result.leveledUp) {
+        setLevelUpInfo({
+          previousLevel: result.previousLevel,
+          newLevel: result.newLevel,
+        });
+        onLevelUpOpen();
+      }
+    }
+  }, [words, updateWordStatus, totalMastered, refreshLevel, onLevelUpOpen]);
+
+  const handleContinueOffline = () => {
+    setIsOfflineMode(true);
+    setShowAuth(false);
   };
 
   const handleNavigate = (screen) => {
@@ -106,7 +160,6 @@ function App() {
     setCurrentScreen('category-landing');
   };
 
-  // Category landing screen handlers
   const handleStudyAll = () => {
     setFilterMode('all');
     setCurrentScreen('flashcard');
@@ -159,7 +212,6 @@ function App() {
     setCurrentScreen('flashcard');
   };
 
-  // Calculate total stats across all categories
   const totalStats = Object.values(categoryProgress).reduce(
     (acc, cat) => ({
       total: acc.total + (cat.total || 0),
@@ -170,12 +222,10 @@ function App() {
     { total: 0, mastered: 0, learning: 0, notSeen: 0 }
   );
 
-  // Get current category info
   const currentCategory = selectedCategory
     ? categories.find(c => c.id === selectedCategory)
     : null;
 
-  // Filter words based on filterMode for category study
   const filteredWords = filterMode && selectedCategory
     ? words.filter(word => {
         if (filterMode === 'all') return true;
@@ -185,8 +235,39 @@ function App() {
       })
     : words;
 
+  // Show loading while checking auth
+  if (authLoading) {
+    return (
+      <Center minH="100vh" bg="gray.900">
+        <Spinner size="xl" color="green.500" />
+      </Center>
+    );
+  }
+
+  // Show auth screen
+  if (showAuth) {
+    return <AuthScreen onContinueOffline={handleContinueOffline} />;
+  }
+
   return (
-    <ChakraProvider theme={theme}>
+    <>
+      {/* Migration prompt modal */}
+      {user && (
+        <MigrationPrompt
+          isOpen={isMigrationOpen}
+          onClose={onMigrationClose}
+          userId={user.id}
+        />
+      )}
+
+      {/* Level up celebration modal */}
+      <LevelUpModal
+        isOpen={isLevelUpOpen}
+        onClose={onLevelUpClose}
+        newLevel={levelUpInfo.newLevel}
+        previousLevel={levelUpInfo.previousLevel}
+      />
+
       {/* Loading spinner */}
       {isLoading && (
         <Center minH="100vh" bg="gray.900">
@@ -221,10 +302,11 @@ function App() {
         <FlashcardScreen
           words={filteredWords}
           stats={stats}
-          onUpdateStatus={updateWordStatus}
+          onUpdateStatus={handleUpdateWordStatus}
           categoryName={studyMode === 'quick-quiz' ? 'Quick Quiz' : studyMode === 'review-weak' ? 'Review Weak Words' : studyMode === 'daily-challenge' ? 'Daily Challenge' : filterMode === 'learning' ? `${currentCategory?.name} (Learning)` : filterMode === 'mastered' ? `${currentCategory?.name} (Mastered)` : currentCategory?.name}
           categoryIcon={studyMode === 'quick-quiz' ? '🎲' : studyMode === 'review-weak' ? '🔄' : studyMode === 'daily-challenge' ? '⚡' : currentCategory?.icon}
           onBackToCategories={selectedCategory ? handleBackToCategoryLanding : handleBackToLearn}
+          isSyncing={isSyncing}
         />
       )}
 
@@ -277,6 +359,16 @@ function App() {
           onCategoriesClick={handleBackToCategories}
         />
       )}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <ChakraProvider theme={theme}>
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
     </ChakraProvider>
   );
 }

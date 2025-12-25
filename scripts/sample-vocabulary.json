@@ -1,0 +1,52 @@
+[
+  {
+    "chinese": "经济",
+    "pinyin": "jīng jì",
+    "english": "economy; economics",
+    "exampleChinese": "中国的经济发展很快。",
+    "examplePinyin": "Zhōngguó de jīngjì fāzhǎn hěn kuài.",
+    "exampleEnglish": "China's economy is developing rapidly.",
+    "hskLevel": 4,
+    "tags": ["business", "formal"]
+  },
+  {
+    "chinese": "投资",
+    "pinyin": "tóu zī",
+    "english": "to invest; investment",
+    "exampleChinese": "他决定投资这个项目。",
+    "examplePinyin": "Tā juédìng tóuzī zhège xiàngmù.",
+    "exampleEnglish": "He decided to invest in this project.",
+    "hskLevel": 5,
+    "tags": ["business", "finance"]
+  },
+  {
+    "chinese": "合同",
+    "pinyin": "hé tong",
+    "english": "contract; agreement",
+    "exampleChinese": "请在合同上签字。",
+    "examplePinyin": "Qǐng zài hétong shàng qiānzì.",
+    "exampleEnglish": "Please sign the contract.",
+    "hskLevel": 5,
+    "tags": ["business", "legal"]
+  },
+  {
+    "chinese": "市场",
+    "pinyin": "shì chǎng",
+    "english": "market",
+    "exampleChinese": "这个市场很大。",
+    "examplePinyin": "Zhège shìchǎng hěn dà.",
+    "exampleEnglish": "This market is very large.",
+    "hskLevel": 4,
+    "tags": ["business", "economics"]
+  },
+  {
+    "chinese": "客户",
+    "pinyin": "kè hù",
+    "english": "client; customer",
+    "exampleChinese": "我们需要了解客户的需求。",
+    "examplePinyin": "Wǒmen xūyào liǎojiě kèhù de xūqiú.",
+    "exampleEnglish": "We need to understand the client's needs.",
+    "hskLevel": 5,
+    "tags": ["business", "service"]
+  }
+]

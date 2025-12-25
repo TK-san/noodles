@@ -11,6 +11,14 @@ export { foodDrinksData } from './foodDrinks';
 export { travelData } from './travel';
 export { marketData } from './market';
 export { dailyActivitiesData } from './dailyActivities';
+export { businessData } from './business';
+export { healthData } from './health';
+export { natureData } from './nature';
+export { technologyData } from './technology';
+export { emotionsData } from './emotions';
+export { homeData } from './home';
+export { educationData } from './education';
+export { sportsData } from './sports';
 
 // Category metadata for UI
 export const categories = [
@@ -109,6 +117,70 @@ export const categories = [
     icon: '📅',
     description: 'Everyday routines and activities',
     getData: () => import('./dailyActivities').then(m => m.dailyActivitiesData)
+  },
+  {
+    id: 'business',
+    name: 'Business & Work',
+    nameZh: '商务工作',
+    icon: '💼',
+    description: 'Business, office, and professional vocabulary',
+    getData: () => import('./business').then(m => m.businessData)
+  },
+  {
+    id: 'health',
+    name: 'Health & Body',
+    nameZh: '健康身体',
+    icon: '🏥',
+    description: 'Health, body parts, and medical terms',
+    getData: () => import('./health').then(m => m.healthData)
+  },
+  {
+    id: 'nature',
+    name: 'Nature & Weather',
+    nameZh: '自然天气',
+    icon: '🌿',
+    description: 'Nature, weather, animals, and landscapes',
+    getData: () => import('./nature').then(m => m.natureData)
+  },
+  {
+    id: 'technology',
+    name: 'Technology & Internet',
+    nameZh: '科技网络',
+    icon: '💻',
+    description: 'Technology, internet, and digital life',
+    getData: () => import('./technology').then(m => m.technologyData)
+  },
+  {
+    id: 'emotions',
+    name: 'Emotions & Personality',
+    nameZh: '情感性格',
+    icon: '😊',
+    description: 'Emotions, feelings, and personality traits',
+    getData: () => import('./emotions').then(m => m.emotionsData)
+  },
+  {
+    id: 'home',
+    name: 'Home & Furniture',
+    nameZh: '家居家具',
+    icon: '🏡',
+    description: 'Home, rooms, furniture, and household items',
+    getData: () => import('./home').then(m => m.homeData)
+  },
+  {
+    id: 'education',
+    name: 'Education & School',
+    nameZh: '教育学校',
+    icon: '📚',
+    description: 'School, subjects, and academic vocabulary',
+    getData: () => import('./education').then(m => m.educationData)
+  },
+  {
+    id: 'sports',
+    name: 'Sports & Fitness',
+    nameZh: '体育健身',
+    icon: '⚽',
+    description: 'Sports, fitness, and competition terms',
+    getData: () => import('./sports').then(m => m.sportsData)
   }
 ];
 
