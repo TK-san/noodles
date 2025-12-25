@@ -18,8 +18,10 @@ import {
   HStack,
   InputGroup,
   InputRightElement,
+  PinInput,
+  PinInputField,
 } from '@chakra-ui/react';
-import { FiSun, FiMoon, FiEye, FiEyeOff } from 'react-icons/fi';
+import { FiSun, FiMoon, FiEye, FiEyeOff, FiArrowLeft } from 'react-icons/fi';
 import { useAuth } from '../contexts/AuthContext';
 
 export const AuthScreen = ({ onContinueOffline }) => {
@@ -31,7 +33,13 @@ export const AuthScreen = ({ onContinueOffline }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const { signIn, signUp, isOfflineMode } = useAuth();
+  // OTP verification state
+  const [showOtpInput, setShowOtpInput] = useState(false);
+  const [otpCode, setOtpCode] = useState('');
+  const [isVerifying, setIsVerifying] = useState(false);
+  const [isResending, setIsResending] = useState(false);
+
+  const { signIn, signUp, verifyOtp, resendOtp } = useAuth();
   const { colorMode, toggleColorMode } = useColorMode();
   const toast = useToast();
 
@@ -93,13 +101,13 @@ export const AuthScreen = ({ onContinueOffline }) => {
           });
         } else {
           toast({
-            title: 'Account created!',
-            description: 'Please check your email to verify your account.',
+            title: 'Verification code sent!',
+            description: 'Please check your email for the 6-digit code.',
             status: 'success',
             duration: 5000,
             isClosable: true,
           });
-          setIsLogin(true);
+          setShowOtpInput(true);
         }
       }
     } catch (err) {
@@ -115,12 +123,196 @@ export const AuthScreen = ({ onContinueOffline }) => {
     }
   };
 
+  const handleVerifyOtp = async () => {
+    if (otpCode.length !== 6) {
+      toast({
+        title: 'Invalid code',
+        description: 'Please enter the 6-digit code from your email.',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
+
+    setIsVerifying(true);
+
+    try {
+      const { error } = await verifyOtp(email, otpCode, 'signup');
+      if (error) {
+        toast({
+          title: 'Verification failed',
+          description: error.message || 'Invalid or expired code. Please try again.',
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+        });
+        setOtpCode('');
+      } else {
+        toast({
+          title: 'Email verified!',
+          description: 'Your account is now active. Welcome!',
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        });
+        // User will be automatically logged in via auth state change
+      }
+    } catch (err) {
+      toast({
+        title: 'Error',
+        description: 'Something went wrong. Please try again.',
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsVerifying(false);
+    }
+  };
+
+  const handleResendOtp = async () => {
+    setIsResending(true);
+
+    try {
+      const { error } = await resendOtp(email);
+      if (error) {
+        toast({
+          title: 'Failed to resend',
+          description: error.message,
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: 'Code resent!',
+          description: 'Please check your email for the new code.',
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        });
+      }
+    } catch (err) {
+      toast({
+        title: 'Error',
+        description: 'Something went wrong. Please try again.',
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsResending(false);
+    }
+  };
+
+  const handleBackFromOtp = () => {
+    setShowOtpInput(false);
+    setOtpCode('');
+  };
+
   const toggleMode = () => {
     setIsLogin(!isLogin);
     setErrors({});
     setConfirmPassword('');
   };
 
+  // OTP Verification Screen
+  if (showOtpInput) {
+    return (
+      <Container maxW="md" h="100vh" display="flex" alignItems="center" position="relative">
+        {/* Theme toggle button */}
+        <Box position="absolute" top={4} right={4}>
+          <IconButton
+            aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}
+            icon={colorMode === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
+            onClick={toggleColorMode}
+            variant="ghost"
+            size="lg"
+            borderRadius="full"
+          />
+        </Box>
+
+        {/* Back button */}
+        <Box position="absolute" top={4} left={4}>
+          <IconButton
+            aria-label="Go back"
+            icon={<FiArrowLeft size={20} />}
+            onClick={handleBackFromOtp}
+            variant="ghost"
+            size="lg"
+            borderRadius="full"
+          />
+        </Box>
+
+        <VStack spacing={6} w="100%" textAlign="center">
+          <Box fontSize="5xl">📧</Box>
+          <Heading size="xl" color={headingColor}>
+            Verify Your Email
+          </Heading>
+          <Text fontSize="md" color={textColor}>
+            We sent a 6-digit code to
+          </Text>
+          <Text fontSize="md" fontWeight="bold" color={headingColor}>
+            {email}
+          </Text>
+
+          <VStack spacing={4} w="100%" maxW="300px">
+            <HStack justify="center">
+              <PinInput
+                size="lg"
+                value={otpCode}
+                onChange={setOtpCode}
+                otp
+                autoFocus
+              >
+                <PinInputField />
+                <PinInputField />
+                <PinInputField />
+                <PinInputField />
+                <PinInputField />
+                <PinInputField />
+              </PinInput>
+            </HStack>
+
+            <Button
+              colorScheme="brand"
+              size="lg"
+              w="100%"
+              onClick={handleVerifyOtp}
+              isLoading={isVerifying}
+              loadingText="Verifying..."
+              isDisabled={otpCode.length !== 6}
+            >
+              Verify Email
+            </Button>
+
+            <HStack spacing={1} justify="center">
+              <Text fontSize="sm" color={textColor}>
+                Didn't receive the code?
+              </Text>
+              <Button
+                variant="link"
+                size="sm"
+                color={headingColor}
+                onClick={handleResendOtp}
+                isLoading={isResending}
+                loadingText="Sending..."
+              >
+                Resend
+              </Button>
+            </HStack>
+          </VStack>
+
+          <Text fontSize="xs" color={textColor} maxW="280px">
+            Check your spam folder if you don't see the email
+          </Text>
+        </VStack>
+      </Container>
+    );
+  }
+
+  // Login/Signup Screen
   return (
     <Container maxW="md" h="100vh" display="flex" alignItems="center" position="relative">
       {/* Theme toggle button */}

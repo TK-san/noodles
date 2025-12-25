@@ -86,6 +86,33 @@ export const AuthProvider = ({ children }) => {
     return { data, error };
   };
 
+  const verifyOtp = async (email, token, type = 'signup') => {
+    if (!isSupabaseConfigured()) {
+      return { error: { message: 'Supabase not configured' } };
+    }
+
+    const { data, error } = await supabase.auth.verifyOtp({
+      email,
+      token,
+      type,
+    });
+
+    return { data, error };
+  };
+
+  const resendOtp = async (email) => {
+    if (!isSupabaseConfigured()) {
+      return { error: { message: 'Supabase not configured' } };
+    }
+
+    const { data, error } = await supabase.auth.resend({
+      type: 'signup',
+      email,
+    });
+
+    return { data, error };
+  };
+
   const value = {
     user,
     loading,
@@ -95,6 +122,8 @@ export const AuthProvider = ({ children }) => {
     signIn,
     signOut,
     resetPassword,
+    verifyOtp,
+    resendOtp,
     setIsOfflineMode,
   };
 
